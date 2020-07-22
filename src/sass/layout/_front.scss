@@ -1,3 +1,32 @@
-.l-front{
+.l-front {
+	&__story {
+		@extend .px-4;
 
+		h2, h3 {
+			@extend .font-weight-bold;
+			@extend .mb-4;
+		}
+
+		h2 {
+			font-size: $fs-sm;
+			font-family: $font-family-futura;
+			@include media-breakpoint-up(lg){
+				font-size: $fs-base;
+			}
+		}
+
+		h3 {
+			font-size: $fs-xxl;
+			font-family: $font-family-didot;
+		}
+
+		&-content {
+			line-height: 1.8em;
+			font-size: $fs-sm;
+			@extend .mb-3;
+			@include media-breakpoint-up(lg) {
+				font-size: $fs-base;
+			}
+		}
+	}
 }

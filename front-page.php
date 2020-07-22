@@ -16,17 +16,19 @@
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			<header class="l-header-top">
-				<?php
-					$top_movie = get_field('top_movie');
-					if ($top_movie) :
-						?>
-						<video id="js-bg_movie" controls loop autoplay muted width="" height="">
-							<source src="<?php echo $top_movie['url']; ?>" type="video/mp4"/>
-						</video>
-					<?php endif; ?>
-			</header>
 
+			<article class="l-front">
+				<section class="l-front__story">
+					<h2>OUR STORY</h2>
+					<h3>blue-eyed girl</h3>
+					<div class="l-front__story-content">
+						<?php the_field('our_story') ?>
+					</div>
+					<a class="u-link-gold" href="<?php echo home_url('/salon'); ?>">
+						MORE
+					</a>
+				</section>
+			</article>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
