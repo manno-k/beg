@@ -17,8 +17,10 @@ drawer
 // hamburger-menu
 
 .drawer-hamburger {
-	width: 120px;
-	height: 120px;
+	width: 10vw;
+	height: 10vw;
+	min-width: 60px;
+	min-height: 60px;
 	max-width: 120px;
 	max-height: 120px;
 	@extend .p-0;
@@ -28,8 +30,11 @@ drawer
 .drawer-hamburger-icon {
 	background-color: $white;
 
-	width: 30%;
+	width: 50%;
 	@extend .mx-auto;
+	@include media-breakpoint-up(md) {
+		width: 30%;
+	}
 
 	&:before {
 		background-color: $white;
@@ -119,6 +124,7 @@ c-nav
 
 			a {
 				@include link_color($black);
+
 				&:hover {
 					transition: $transition-base;
 					text-decoration: none;

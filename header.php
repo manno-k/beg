@@ -49,11 +49,15 @@
 
 <body <?php body_class('js-loader js-loader-body js-drawer drawer--right'); ?>>
 <header id="masthead" class="l-header">
-	<div class="site-branding">
+	<div class="site-branding l-header__branding">
 		<?php
 			if (is_front_page() || is_home()) : ?>
 				<h1 class="site-title l-header__h1">
-					<?php the_custom_logo(); ?>
+					<?php if (wp_is_mobile()) :?>
+						<img src="<?php echo esc_url( get_stylesheet_directory_uri() ) ;?>/assets/img/logo__sp.png" alt="<?php bloginfo('name'); ?>" />
+					<?php else: ?>
+						<?php the_custom_logo(); ?>
+					<?php endif; ?>
 					<div class="sr-only"><?php bloginfo('name'); ?></div>
 				</h1>
 				<p class="l-header__desc">

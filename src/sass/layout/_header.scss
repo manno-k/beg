@@ -5,12 +5,41 @@ l-header
 	@extend .position-relative;
 	height: 100vh;
 	width: 100vw;
-	padding: 2rem 3rem;
+	padding: 1rem 2rem;
 	letter-spacing: $base-letter-spacing;
+	@include media-breakpoint-up(md) {
+		padding: 2rem 3rem;
+	}
 
+	&__branding {
+		position: absolute;
+		bottom: 10%;
+		@include media-breakpoint-up(lg) {
+			position: relative;
+			bottom: auto;
+			&:before {
+				position: absolute;
+				content: '';
+				display: block;
+				width: 110px;
+				height: 76px;
+				background: url("assets/img/icon/icon-logo.png") center no-repeat;
+				background-size: contain;
+				top: -10%;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+			}
+		}
+	}
 
 	&__h1 {
 		@extend .position-relative;
+		border-bottom: 1px solid $white;
+		padding-bottom: .5rem;
+		@include media-breakpoint-up(lg) {
+			border-bottom: 0;
+		}
 
 		img {
 			width: 200px;
@@ -19,6 +48,12 @@ l-header
 
 	&__desc {
 		color: $white;
+		font-size: $fs-sm;
+		width: 80%;
+		@include media-breakpoint-up(lg) {
+			font-style: $fs-base;
+			width: 100%;
+		}
 	}
 
 	&-top {
@@ -38,6 +73,8 @@ l-header
 	}
 
 	&__center {
+		@extend .u-hidden-md-down;
+
 		position: absolute;
 		object-fit: contain;
 		width: 100%;
@@ -46,6 +83,8 @@ l-header
 	}
 
 	&__sns {
+		@extend .u-hidden-md-down;
+
 		@extend .list-unstyled;
 		@extend .m-0;
 		@extend .position-absolute;
@@ -71,6 +110,7 @@ l-header
 
 	&__member {
 		@extend .position-absolute;
+		@extend .u-hidden-md-down;
 		right: 10rem;
 		top: 2rem;
 		font-size: $fs-sm;
@@ -83,30 +123,31 @@ l-header
 
 	&__reserve {
 		@extend .position-fixed;
+		@extend .text-center;
+		font-size: $fs-sm;
 		bottom: 0;
 		right: 0;
-		padding: 3rem 4rem;
 		background-color: $black;
 		transition: $transition-base;
+		padding: 1rem;
+		width: 100%;
 
-		&:hover {
-			color: $gray-black !important;
-			transition: $transition-base;
+		@include link_color($white);
+		@include media-breakpoint-up(lg) {
+			font-size: $fs-base;
+			padding: 3rem 4rem;
+			width: auto;
 		}
 
-		a {
-			@include link_color($white);
+		&:hover {
 			transition: $transition-base;
-
-			&:hover {
-				transition: $transition-base;
-				text-decoration: none;
-				color: $gray-black;
-			}
+			text-decoration: none;
+			color: $gray-black;
 		}
 	}
 
 	&__copy {
+		@extend .u-hidden-md-down;
 		@extend .position-absolute;
 		font-size: $fs-sm;
 		transform: rotate(-90deg) translate(-50%);
