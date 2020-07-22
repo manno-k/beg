@@ -1,7 +1,119 @@
 /*
 l-header
  */
-.l-header{
+.l-header {
+	@extend .position-relative;
+	height: 100vh;
+	width: 100vw;
+	padding: 2rem 3rem;
+	letter-spacing: $base-letter-spacing;
 
+
+	&__h1 {
+		@extend .position-relative;
+
+		img {
+			width: 200px;
+		}
+	}
+
+	&__desc {
+		color: $white;
+	}
+
+	&-top {
+		video {
+			@extend .position-absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			margin: auto;
+			width: calc(100% - 3rem);
+			height: calc(100% - 3rem);
+			z-index: -1;
+
+			@include object-fit(cover);
+		}
+	}
+
+	&__center {
+		position: absolute;
+		object-fit: contain;
+		width: 100%;
+		left: 0;
+		top: 30%;
+	}
+
+	&__sns {
+		@extend .list-unstyled;
+		@extend .m-0;
+		@extend .position-absolute;
+		bottom: 3rem;
+
+		li {
+			@extend .d-inline-block;
+			@extend .m-0;
+			@extend .mr-3;
+		}
+
+		a {
+			@include link_color($white);
+			transition: $transition-base;
+
+			&:hover {
+				transition: $transition-base;
+				text-decoration: none;
+				color: $gray-black;
+			}
+		}
+	}
+
+	&__member {
+		@extend .position-absolute;
+		right: 10rem;
+		top: 2rem;
+		font-size: $fs-sm;
+		@extend .u-hover-text-line;
+		@extend .u-hover-text-line__white;
+		@include link_color($white);
+		transition: $transition-base;
+
+	}
+
+	&__reserve {
+		@extend .position-fixed;
+		bottom: 0;
+		right: 0;
+		padding: 3rem 4rem;
+		background-color: $black;
+		transition: $transition-base;
+
+		&:hover {
+			color: $gray-black !important;
+			transition: $transition-base;
+		}
+
+		a {
+			@include link_color($white);
+			transition: $transition-base;
+
+			&:hover {
+				transition: $transition-base;
+				text-decoration: none;
+				color: $gray-black;
+			}
+		}
+	}
+
+	&__copy {
+		@extend .position-absolute;
+		font-size: $fs-sm;
+		transform: rotate(-90deg) translate(-50%);
+		top: 50%;
+		transform-origin: left;
+		left: 1em;
+
+	}
 }
 

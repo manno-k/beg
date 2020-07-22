@@ -14,9 +14,9 @@ _s style
  */
 @import "foundation/_s/underscores_normalize";
 /*
-hiraku
+drawer
  */
-@import "foundation/hiraku/hiraku";
+@import "foundation/drawer/drawer";
 /*
 slick
  */
@@ -34,13 +34,18 @@ Theme Sass file
 @import "object/utility/utility";
 @import "object/component/js";
 @import "object/component/btn";
+@import "object/component/nav";
 // layout
 @import "layout/header";
 @import "layout/footer";
+@import "layout/loader";
 // project
 @import "object/project/nav";
 @import "object/project/sidebar";
 
+:root{
+	font-size: $fs-base;
+}
 // safariのカラム落ち対策
 .row {
 	&::before,
@@ -66,4 +71,3 @@ dl, dt, dd {
 	margin: 0;
 	padding: 0;
 }
-

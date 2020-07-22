@@ -4,19 +4,30 @@
 
 // font-size
 
-$fs-base: 14px;
-$fs-md: 16px;
-$fs-lg: 23px;
-$fs-xl: 28px;
-$fs-xxl: 32px;
+$fs-base: 16px;
+$fs-sm: 0.75em;
+$fs-md: 1.2em;
+$fs-lg: 1.6em;
+$fs-xl: 2em;
+$fs-xxl: 2.3em;
+
+//base-letter-spacing
+$base-letter-spacing:5.4px;
 
 // base-font
 
-$font-family-gothic: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif !default;
+$font-family-gothic: a-otf-ud-shin-maru-go-pr6n,-apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif !default;
+$font-family-futura:futura-pt,sans-serif;
 $font-family-mincho: Georgia, 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", HGS明朝E, メイリオ, Meiryo, serif !default;
 $font-family-base: $font-family-gothic;
 
 // base-color
+
+$gold: #AE9B3D;
+$blue: #6699DD;
+$gray: #AEAEAE;
+$gray-white: #E7E7E7;
+$gray-black: #535353;
 
 //sns
 $fb-blue: #3B5998;

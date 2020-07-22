@@ -1,0 +1,16 @@
+.js-loader-body {
+	opacity: 1;
+	transition: $transition-base;
+}
+
+
+.js-loader {
+	opacity: 0;
+	transition: $transition-base;
+}
+
+.js-loader-out {
+	opacity: 0;
+	transition: $transition-base;
+}
+

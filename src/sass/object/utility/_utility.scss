@@ -44,7 +44,7 @@ bg color
 text
  */
 
-.u-white-nowrap{
+.u-white-nowrap {
 	white-space: nowrap;
 }
 
@@ -56,6 +56,36 @@ link styles
 	@extend .d-block;
 	@extend .w-100;
 }
+
+.u-hover-text-line {
+	&:hover:before {
+		content: "";
+		@extend .position-absolute;
+		height: 1px;
+		width: 120%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&__black:hover {
+		color: $black !important;
+
+		&:before {
+			background-color: $black;
+		}
+	}
+
+	&__white:hover {
+		color: $white !important;
+
+		&:before {
+			background-color: $white;
+		}
+	}
+}
+
 
 /*
 display none properties

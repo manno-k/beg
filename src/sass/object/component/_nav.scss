@@ -1,0 +1,130 @@
+/*
+drawer
+ */
+
+// toggle
+
+.drawer-toggle {
+	background-color: $black;
+	border-radius: 0;
+	@extend .position-absolute;
+
+	&:hover {
+		background-color: $black;
+	}
+}
+
+// hamburger-menu
+
+.drawer-hamburger {
+	width: 120px;
+	height: 120px;
+	max-width: 120px;
+	max-height: 120px;
+	@extend .p-0;
+
+}
+
+.drawer-hamburger-icon {
+	background-color: $white;
+
+	width: 30%;
+	@extend .mx-auto;
+
+	&:before {
+		background-color: $white;
+	}
+
+	&:after {
+		content: none;
+	}
+}
+
+// open時
+.drawer--right.drawer-open {
+	.drawer-hamburger-icon {
+		background-color: $white;
+		transform: rotate(-45deg);
+
+		&:before {
+			transform: rotate(-90deg);
+		}
+	}
+
+	// nav幅
+	.drawer-nav {
+		width: 60%;
+	}
+
+	.drawer-hamburger {
+		right: 53%;
+		top: 3%;
+	}
+}
+
+
+/*
+c-nav
+ */
+.c-nav {
+	&__inner {
+		&-wrap {
+			@extend .d-flex;
+			@extend .flex-wrap;
+
+		}
+
+		&-left, &-right {
+			padding: 15% 5%;
+
+			ul, li {
+				@extend .ml-0;
+				@extend .p-0;
+				@extend .list-unstyled;
+			}
+
+			li {
+				span {
+					color: $gray-black;
+					@extend .d-block;
+				}
+
+				&:not(:last-child) {
+					margin-bottom: 5rem;
+				}
+			}
+		}
+
+		&-left {
+			color: $white;
+			background-color: $black;
+			height: 100vh;
+			@include flex-basis(40%);
+
+			a {
+				@include link_color($white);
+				transition: $transition-base;
+
+				&:hover {
+					transition: $transition-base;
+					text-decoration: none;
+					color: $gray-black;
+				}
+			}
+		}
+
+		&-right {
+			@include flex-basis(60%);
+			@extend .text-center;
+
+			a {
+				@include link_color($black);
+				&:hover {
+					transition: $transition-base;
+					text-decoration: none;
+					color: $gray-white;
+				}
+			}
+		}
+	}
+}

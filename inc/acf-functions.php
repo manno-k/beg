@@ -8,20 +8,20 @@
  *
  * Doc https://www.advancedcustomfields.com/add-ons/options-page/
  */
-//
-//if( function_exists('acf_add_options_page') ) {
-//
-//	acf_add_options_page(array(
-//		'page_title' 	=> '共通オプション設定',
-//		'menu_title'	=> '共通オプション',
-//		'menu_slug' 	=> 'theme-options',
-//		'capability'	=> 'edit_posts',
-//		'parent_slug'	=> '',
-//		'position'	=> false,
-//		'redirect'	=> false,
-//	));
-//
-//}
+
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page(array(
+		'page_title' 	=> '共通オプション設定',
+		'menu_title'	=> '共通オプション',
+		'menu_slug' 	=> 'theme-options',
+		'capability'	=> 'edit_posts',
+		'parent_slug'	=> '',
+		'position'	=> false,
+		'redirect'	=> false,
+	));
+
+}
 
 /**
  * ACF JSON 保存先

@@ -3,7 +3,7 @@ gulpファイルで使用する変数やオプションを指定します。
  */
 module.exports = {
 	server: {
-		proxy: 'wordpresstemplate.lo',
+		proxy: 'beg.lo',
 		https: false,
 		port: 3000,
     open: 'external'
@@ -25,8 +25,9 @@ module.exports = {
 		// 指定していないファイルはminified.jsに圧縮されない。
 		concat: [
 			// ハンバーガーメニュー
-			'src/js/hiraku.js',
-			'src/js/hiraku-init.js',
+			'src/js/iscroll.js',
+			'src/js/drawer.js',
+			'src/js/drawer-init.js',
 			// スライダー
 			'src/js/slick.js',
 			'src/js/slick-init.js',
@@ -41,6 +42,8 @@ module.exports = {
       // bootstrap
       'src/js/popper.js',
       'src/js/bootstrap.js',
+      'src/js/video.js',
+      'src/js/loader.js',
 
 		]
 	},
