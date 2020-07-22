@@ -58,6 +58,9 @@ link styles
 }
 
 .u-hover-text-line {
+	&:hover{
+		text-decoration: none;
+	}
 	&:hover:before {
 		content: "";
 		@extend .position-absolute;
@@ -67,6 +70,7 @@ link styles
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		text-decoration: none;
 	}
 
 	&__black:hover {

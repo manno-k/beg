@@ -62,8 +62,9 @@ drawer
 	}
 
 	.drawer-hamburger {
-		right: 53%;
-		top: 3%;
+		right: 52vw;
+		background-color: transparent;
+		//top: 3%;
 	}
 }
 
@@ -95,7 +96,7 @@ c-nav
 				}
 
 				&:not(:last-child) {
-					margin-bottom: 5rem;
+					margin-bottom: 2rem;
 				}
 			}
 		}

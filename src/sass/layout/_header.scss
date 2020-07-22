@@ -11,6 +11,20 @@ l-header
 		padding: 2rem 3rem;
 	}
 
+	&:before {
+		@extend .position-absolute;
+		content: "";
+		background: url("assets/img/bg/bg-hero-line.png")right no-repeat;
+		background-size: contain;
+		top: 7%;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		@include media-breakpoint-up(md){
+			display: none;
+		}
+	}
+
 	&__branding {
 		position: absolute;
 		bottom: 10%;
@@ -35,11 +49,7 @@ l-header
 
 	&__h1 {
 		@extend .position-relative;
-		border-bottom: 1px solid $white;
 		padding-bottom: .5rem;
-		@include media-breakpoint-up(lg) {
-			border-bottom: 0;
-		}
 
 		img {
 			width: 200px;
