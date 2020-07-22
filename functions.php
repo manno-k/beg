@@ -148,4 +148,4 @@ require get_template_directory() . '/inc/widget-init.php';
  * Custom Posts Settings
  */
 
-//require get_template_directory() . '/inc/custom-posts.php';
+require get_template_directory() . '/inc/custom-posts.php';
