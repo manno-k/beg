@@ -136,6 +136,7 @@ l-header
 	&__reserve {
 		@extend .position-fixed;
 		@extend .text-center;
+
 		font-size: $fs-sm;
 		bottom: 0;
 		right: 0;
@@ -143,7 +144,7 @@ l-header
 		transition: $transition-base;
 		padding: 1rem;
 		width: 100%;
-
+		z-index: 1;
 		@include link_color($white);
 		@include media-breakpoint-up(lg) {
 			font-size: $fs-base;

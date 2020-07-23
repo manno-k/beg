@@ -26,6 +26,7 @@ size
 
 .u-max-width {
 	max-width: $base-width;
+	@extend .mx-auto;
 }
 
 /*
