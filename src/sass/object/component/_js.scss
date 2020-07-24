@@ -76,9 +76,13 @@ slick
 
 	&-arrow.pc {
 		@extend .position-absolute;
-		font-size: $fs-xxl;
 		padding: 0;
-		bottom: 0;
-		right: 0;
+		top: 70%;
+		right: 10%;
+		button{
+			@extend .m-0;
+			@extend .p-0;
+			font-size: $fs-xxl;
+		}
 	}
 }

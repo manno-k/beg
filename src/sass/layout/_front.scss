@@ -345,6 +345,7 @@
 
 	&__shop {
 		@extend .px-4;
+		@extend .position-relative;
 
 		h2 {
 			font-family: $font-family-didot;
