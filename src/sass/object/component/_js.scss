@@ -55,3 +55,30 @@ slick
 		left: 50%;
 	}
 }
+
+.js-front__shop {
+	@extend .position-relative;
+
+	&-arrow {
+		@extend .d-flex;
+		@extend .flex-wrap;
+		@extend .justify-content-between;
+
+		.prev, .next {
+			@extend .font-weight-bold;
+			background-color: transparent;
+			border: none;
+			font-family: $font-family-futura;
+			letter-spacing: .5em;
+			@extend .mb-3;
+		}
+	}
+
+	&-arrow.pc {
+		@extend .position-absolute;
+		font-size: $fs-xxl;
+		padding: 0;
+		bottom: 0;
+		right: 0;
+	}
+}

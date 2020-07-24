@@ -114,6 +114,12 @@
 					</div>
 				</section>
 
+				<?php get_template_part('template-parts/components/front/front','nav'); ?>
+
+				<section class="l-front__shop">
+					<h2>Shop</h2>
+					<?php echo do_shortcode('[BASE_ITEM]'); ?>
+				</section>
 			</article>
 		</main><!-- #main -->
 	</div><!-- #primary -->

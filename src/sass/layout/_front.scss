@@ -82,6 +82,7 @@
 		@extend .u-max-width;
 		@extend .mt-4;
 		@extend .mt-lg-0;
+		@extend .mb-5;
 		@extend .px-4;
 		@extend .py-4;
 		@extend .py-lg-0;
@@ -294,6 +295,65 @@
 				@include media-breakpoint-up(lg) {
 					margin-top: 5rem;
 				}
+			}
+		}
+	}
+
+	&__nav {
+		@extend .d-flex;
+		@extend .flex-wrap;
+		@extend .mb-5;
+
+		&-left, &-right {
+			@extend .text-center;
+			@include flex-basis(100%);
+			@include media-breakpoint-up(lg) {
+				@include flex-basis(50%);
+				padding: 4em 0;
+				border: 1px solid $black;
+			}
+		}
+
+		&-left {
+			background-color: $black;
+			@include link_color($white) {
+				text-decoration: none;
+			}
+		}
+
+		&-right {
+			background-color: $white;
+			@include link_color($black) {
+				text-decoration: none;
+			}
+		}
+
+		/*
+		スマホ表示用
+		 */
+		&-sp {
+			@extend .w-100;
+			@extend .mb-5;
+
+			a:first-child {
+				@extend .d-block;
+				@extend .mb-3;
+			}
+
+		}
+	}
+
+	&__shop {
+		@extend .px-4;
+
+		h2 {
+			font-family: $font-family-didot;
+			@extend .font-weight-bold;
+			font-size: $fs-xxl;
+			@extend .text-center;
+			@include media-breakpoint-up(lg) {
+				font-size: $fs-xxl *2;
+				margin-bottom: 5rem;
 			}
 		}
 	}

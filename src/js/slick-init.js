@@ -19,4 +19,27 @@ jQuery(function ($) {
       }
     ]
   });
+
+  $('.js-front__shop').slick({
+    slidesToShow: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    dots: false,
+    arrows: true,
+    adaptiveHeight: false,
+    fade:true,
+    appendArrows: '.js-front__shop-arrow',
+    prevArrow: '<button type=”button” class="prev">←</button>',
+    nextArrow: '<button type=”button” class="next">→</button>',
+    responsive: [
+      {
+        breakpoint: 990,
+        settings: {
+          prevArrow: '<button type=”button” class="prev">←PREV</button>',
+          nextArrow: '<button type=”button” class="next">NEXT→</button>',
+        }
+      }
+    ]
+  });
 });
+
