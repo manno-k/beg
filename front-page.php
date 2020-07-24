@@ -36,7 +36,7 @@
 					</a>
 				</section>
 				<section class="l-front__news">
-					<div class="l-front__news-left"></div>
+					<div class="l-front__news-left empty"></div>
 					<div class="l-front__news-right">
 						<h2>Latest News</h2>
 					</div>
@@ -47,7 +47,7 @@
 							'posts_per_page' => 4
 						));
 					?>
-					<div class="l-front__news-left bottom">
+					<div class="l-front__news-left">
 						<div class="js-news">
 							<?php if ($my_query->have_posts()): while ($my_query->have_posts()): $my_query->the_post(); ?>
 								<a href="<?php the_permalink(); ?>">
@@ -69,7 +69,7 @@
 							?>
 						</div>
 					</div>
-					<div class="l-front__news-right bottom">
+					<div class="l-front__news-right">
 						<?php
 							$paged    = get_query_var('paged') ? get_query_var('paged') : 1;
 							$my_query = new WP_Query(array(
@@ -79,17 +79,24 @@
 						?>
 						<?php if ($my_query->have_posts()): while ($my_query->have_posts()): $my_query->the_post(); ?>
 							<a class="post" href="<?php the_permalink(); ?>">
-								<span class="cat"><?php
+								<span class="cat">
+									<?php
 										$category = get_the_category();
 										echo $category[0]->cat_name;
-									?></span>
+									?>
+								</span>
 								<time>
 									<?php the_time('Y-m-d'); ?>
 								</time>
 								<h3>
 									<?php
-										if (mb_strlen($post->post_title, 'UTF-8') > 13) {
-											$title = mb_substr($post->post_title, 0, 13, 'UTF-8');
+										if (wp_is_mobile()) {
+											$title_length = 30;
+										} else {
+											$title_length = 13;
+										}
+										if (mb_strlen($post->post_title, 'UTF-8') > $title_length) {
+											$title = mb_substr($post->post_title, 0, $title_length, 'UTF-8');
 											echo $title . '…';
 										} else {
 											echo $post->post_title;
@@ -106,6 +113,7 @@
 						<div class="hr"></div>
 					</div>
 				</section>
+
 			</article>
 		</main><!-- #main -->
 	</div><!-- #primary -->
