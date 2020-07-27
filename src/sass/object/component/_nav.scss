@@ -58,13 +58,18 @@ drawer
 
 	// nav幅
 	.drawer-nav {
-		width: 60%;
+		width: 100%;
+		@include media-breakpoint-up(lg) {
+			width: 60%;
+		}
 	}
 
 	.drawer-hamburger {
-		right: 52vw;
+		right: 80vw;
 		background-color: transparent;
-		//top: 3%;
+		@include media-breakpoint-up(lg) {
+			right: 52vw;
+		}
 	}
 }
 
@@ -74,6 +79,9 @@ c-nav
  */
 .c-nav {
 	&__inner {
+		@extend .text-center;
+		@extend .text-lg-left;
+
 		&-wrap {
 			@extend .d-flex;
 			@extend .flex-wrap;
@@ -81,7 +89,10 @@ c-nav
 		}
 
 		&-left, &-right {
-			padding: 15% 5%;
+			padding: 20% 5%;
+			@include media-breakpoint-up(lg) {
+				padding: 15% 5%;
+			}
 
 			ul, li {
 				@extend .ml-0;
@@ -102,10 +113,23 @@ c-nav
 		}
 
 		&-left {
+			@extend .position-relative;
 			color: $white;
 			background-color: $black;
 			height: 100vh;
-			@include flex-basis(40%);
+			@include flex-basis(100%);
+			@include media-breakpoint-up(lg) {
+				@include flex-basis(40%);
+			}
+
+			&:before{
+				@extend .d-block;
+				@extend .position-absolute;
+				content: "";
+				bottom: .5em;
+				right: .5em;
+				@include svg-schroll;
+			}
 
 			a {
 				@include link_color($white);
@@ -120,8 +144,11 @@ c-nav
 		}
 
 		&-right {
-			@include flex-basis(60%);
 			@extend .text-center;
+			@include flex-basis(100%);
+			@include media-breakpoint-up(lg) {
+				@include flex-basis(60%);
+			}
 
 			a {
 				@include link_color($black);

@@ -427,6 +427,7 @@
 
 		&-logo {
 			@extend .position-relative;
+			@extend .u-hidden-lg-up;
 			z-index: 2;
 			@extend .px-4;
 

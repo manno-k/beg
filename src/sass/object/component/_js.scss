@@ -77,8 +77,9 @@ slick
 	&-arrow.pc {
 		@extend .position-absolute;
 		padding: 0;
-		top: 70%;
+		top: 60%;
 		right: 10%;
+		z-index: 2;
 
 		button {
 			@extend .m-0;
@@ -166,6 +167,9 @@ slick
 				max-width: 100%;
 				max-height: 800px;
 				@include object-fit(cover, top);
+				@include media-breakpoint-up(md) {
+					@include object-fit(contain, top);
+				}
 			}
 		}
 
@@ -225,13 +229,13 @@ slick
 		}
 
 		.prev {
-			left: 1.5rem;
+			left: .5rem;
 			bottom: 10%;
 		}
 
 		.next {
 			top: 10%;
-			right: .5rem;
+			right: 0;
 		}
 	}
 }

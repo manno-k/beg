@@ -2,16 +2,22 @@
     Right
 \*!------------------------------------*/
 .drawer--right .drawer-nav {
-  right: calc(0 - var(--drawer-width));
-  transition: right var(--drawer-transitionDuration) var(--drawer-transitionFunction);
+	right: calc(0 - var(--drawer-width));
+	transition: right var(--drawer-transitionDuration) var(--drawer-transitionFunction);
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
 }
 
 .drawer--right.drawer-open .drawer-nav,
 .drawer--right .drawer-hamburger,
 .drawer--right.drawer-open .drawer-navbar .drawer-hamburger {
-  right: 0;
+	right: 0;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
 }
 
 .drawer--right.drawer-open .drawer-hamburger {
-  right: var(--drawer-width);
+	right: var(--drawer-width);
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
 }
