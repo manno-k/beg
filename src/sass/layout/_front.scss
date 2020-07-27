@@ -343,7 +343,7 @@
 		}
 	}
 
-	&__shop {
+	&__shop, &__ig {
 		@extend .px-4;
 		@extend .position-relative;
 
@@ -352,10 +352,88 @@
 			@extend .font-weight-bold;
 			font-size: $fs-xxl;
 			@extend .text-center;
+			margin-bottom: 2rem;
 			@include media-breakpoint-up(lg) {
-				font-size: $fs-xxl *2;
-				margin-bottom: 5rem;
+				font-size: $fs-xxl *1.5;
+				margin-bottom: 3rem;
 			}
 		}
 	}
+
+
+	&__ig {
+		@extend .mx-auto;
+		@extend .position-relative;
+		@extend .px-4;
+		@extend .px-lg-0;
+
+		@include media-breakpoint-up(lg) {
+			width: 80%;
+		}
+
+		&-feed {
+			.wpmi-list {
+				@extend .justify-content-between;
+			}
+
+			.wpmi-item {
+				@extend .mb-3;
+				@include flex-basis(49%);
+				@include media-breakpoint-up(md) {
+					@include flex-basis(24%);
+				}
+			}
+		}
+
+		&-more {
+			@extend .position-relative;
+
+			a {
+				@extend .d-block;
+				@extend .mb-5;
+				background-color: $black;
+				@extend .mx-auto;
+				@extend .text-center;
+				padding: .5rem 0;
+				font-size: $fs-sm;
+				max-width: 80%;
+
+				@include link_color($white) {
+					text-decoration: none;
+				}
+
+				@include media-breakpoint-up(lg) {
+					max-width: 290px;
+					font-size: $fs-base;
+					padding: 1rem 3rem;
+				}
+			}
+		}
+
+		&-bar {
+			@extend .position-absolute;
+			height: 1px;
+			width: 100%;
+			background: $black;
+			z-index: -1;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&__catalog {
+		@extend .position-relative;
+
+		&-logo {
+			@extend .position-relative;
+			z-index: 2;
+			@extend .px-4;
+
+			h2 {
+				margin-bottom: -.5rem;
+			}
+		}
+	}
+
 }

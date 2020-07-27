@@ -29,6 +29,7 @@ Theme Sass file
 @import 'foundation/variable';
 @import "foundation/mixin";
 @import "foundation/svg";
+@import "foundation/animation";
 
 // object
 @import "object/utility/utility";
@@ -36,6 +37,8 @@ Theme Sass file
 @import "object/component/btn";
 @import "object/component/nav";
 @import "object/component/shop";
+@import "object/component/totop";
+@import "object/component/sns";
 // layout
 @import "layout/header";
 @import "layout/footer";

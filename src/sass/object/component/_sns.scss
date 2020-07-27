@@ -1,0 +1,106 @@
+.c-sns {
+	h2 {
+		font-size: $fs-xl;
+		font-family: $font-family-didot;
+		@extend .text-right;
+		@extend .text-lg-center;
+		background: url("assets/img/footer/footer-banner.png") center no-repeat;
+		background-size: cover;
+		color: $white;
+		@extend .mb-5;
+		padding: 2rem 1rem 2rem 7rem;
+		@include media-breakpoint-up(lg) {
+			padding: 5rem 0;
+			font-size: $fs-xxl * 1.5;
+		}
+	}
+
+	&__list {
+		@extend .ml-0;
+		@extend .mb-5;
+		@extend .px-4;
+		@extend .p-lg-0;
+		@extend .d-flex;
+		@extend .flex-wrap;
+		@extend .justify-content-center;
+
+		li {
+			@extend .list-unstyled;
+
+			&:not(:last-child) {
+				@extend .mr-3;
+			}
+		}
+
+		/*
+		sns icon
+		 */
+
+		$sns: facebook, instagram, twitter, pinterest, ameba;
+		@each $v in $sns {
+			.#{$v} {
+				@extend .d-block;
+			}
+		}
+		$sns-icon-size: 35px;
+		$sns-icon-size_pc: 50px;
+
+
+		.facebook {
+			@include svg-icon-facebook($sns-icon-size);
+			@include media-breakpoint-up(lg) {
+				@include svg-icon-facebook($sns-icon-size_pc);
+			}
+		}
+
+		.instagram {
+			@include svg-icon-instagram($sns-icon-size);
+			@include media-breakpoint-up(lg) {
+				@include svg-icon-instagram($sns-icon-size_pc);
+
+			}
+		}
+
+		.twitter {
+			@include svg-icon-twitter($sns-icon-size);
+			@include media-breakpoint-up(lg) {
+				@include svg-icon-twitter($sns-icon-size_pc);
+
+			}
+		}
+
+		.ameba {
+			@include svg-icon-ameba($sns-icon-size);
+			@include media-breakpoint-up(lg) {
+				@include svg-icon-ameba($sns-icon-size_pc);
+
+			}
+		}
+
+		.pinterest {
+			@include svg-icon-pinterest($sns-icon-size);
+			@include media-breakpoint-up(lg) {
+				@include svg-icon-pinterest($sns-icon-size_pc);
+
+			}
+		}
+	}
+
+	p {
+		font-family: $font-family-futura;
+		letter-spacing: 1em;
+		@extend .font-weight-bold;
+		color: $gold;
+		@extend .text-center;
+		@extend .pb-3;
+		@extend .mx-auto;
+		border-bottom: 2px solid $gold;
+		@include max-content;
+		font-size: $fs-sm;
+		margin-bottom: 3rem;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 5rem;
+			font-size: $fs-base;
+		}
+	}
+}

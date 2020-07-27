@@ -1,0 +1,32 @@
+.c-totop {
+	@extend .text-center;
+	font-size: $fs-base;
+	font-family: $font-family-futura;
+	letter-spacing: 1em;
+	@extend .mb-4;
+
+	a {
+		@include link_color($black) {
+			text-decoration: none;
+		}
+	}
+
+	&__bar {
+		@extend .position-relative;
+		height: 180px;
+		width: 1px;
+		background-color: $black;
+		@extend .d-block;
+		@extend .mx-auto;
+		@extend .my-4;
+
+		&:after {
+			@extend .position-absolute;
+			content: "●";
+			color: $gold;
+			@extend .d-block;
+			transform: translateX(-7px);
+			animation: bottom-to-top ease-in-out infinite alternate 2s;
+		}
+	}
+}

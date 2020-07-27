@@ -49,7 +49,7 @@
 		</script>
 	</head>
 
-<body <?php body_class('js-loader js-loader-body js-drawer drawer--right'); ?>>
+<body id="#top" <?php body_class('js-loader js-loader-body js-drawer drawer--right'); ?>>
 <header id="masthead" class="l-header">
 	<div class="site-branding l-header__branding">
 		<?php

@@ -92,7 +92,7 @@
             "placeholder": "",
             "maxlength": "",
             "rows": 2,
-            "new_lines": ""
+            "new_lines": "br"
         },
         {
             "key": "field_5f18049bf8d7b",
@@ -309,6 +309,70 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5f1e95b6f4b3e",
+            "label": "フッター",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f1e95a4f4b3d",
+            "label": "フッター画像(前)",
+            "name": "footer_img",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5f1e95caf4b3f",
+            "label": "フッター画像(後)",
+            "name": "footer_img_back",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -328,5 +392,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1595428363
+    "modified": 1595839957
 }

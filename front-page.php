@@ -114,12 +114,90 @@
 					</div>
 				</section>
 
-				<?php get_template_part('template-parts/components/front/front','nav'); ?>
+				<?php get_template_part('template-parts/components/front/front', 'nav'); ?>
 
 				<section class="l-front__shop">
 					<h2>Shop</h2>
 					<?php echo do_shortcode('[BASE_ITEM]'); ?>
 				</section>
+
+				<section class="l-front__catalog">
+					<div class="l-front__catalog-logo">
+						<h2>
+							<img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/assets/img/front/catalog/catalog-title__sp.png" alt="hair catalog"/>
+						</h2>
+					</div>
+					<div class="js-catalog__arrow"></div>
+					<div class="js-catalog">
+						<?php
+							$paged    = get_query_var('paged') ? get_query_var('paged') : 1;
+							$my_query = new WP_Query(array(
+								'paged'          => $paged,
+								'posts_per_page' => 5,
+								'post_type'      => 'hair_style'
+							));
+							$i        = 01;
+							if ($my_query->have_posts()): while ($my_query->have_posts()): $my_query->the_post();
+								if (wp_is_mobile()) {
+									$img_size = 'medium';
+								} else {
+									$img_size = 'full';
+								}
+								$title = get_the_title();
+
+								$staff          = get_field('style_staff');
+								$style_img_main = get_field('style_img_main');
+								$style_img_side = get_field('style_img_side');
+
+								$attr = [
+									'alt' => $title
+								];
+								?>
+								<div class="js-catalog__item">
+									<div class="js-catalog__num">
+										<?php foreach ($staff as $post):
+											$staff_name = get_field('staff_name'); ?>
+											<h3>Style <?php echo sprintf('%02d', $i); ?></h3>
+											<p>DESIGN BY <?php echo $staff_name; ?></p>
+										<?php endforeach; ?>
+									</div>
+									<div class="js-catalog__img">
+										<div class="js-catalog__img-left">
+											<a href="<?php the_permalink(); ?>">
+												<?php echo wp_get_attachment_image($style_img_main, $size, 0, $attr); ?>
+											</a>
+										</div>
+										<div class="js-catalog__img-right">
+											<a href="<?php the_permalink(); ?>">
+												<?php echo wp_get_attachment_image($style_img_side, $size, 0, $attr); ?>
+											</a>
+										</div>
+
+									</div>
+
+								</div>
+								<?php
+								$i++;
+							endwhile;
+							endif;
+							wp_reset_postdata();
+						?>
+					</div>
+				</section>
+
+				<section class="l-front__ig">
+					<h2>Latest Posts</h2>
+					<div class="l-front__ig-feed">
+						<?php echo do_shortcode('[wp_my_instagram username="kazu_tasty" limit="4" layout="4" size="large" link="" target="_blank"]'); ?>
+					</div>
+				</section>
+				<div class="l-front__ig-more">
+					<a href="<?php the_field('instagram', 'Options'); ?>" target="_blank">
+						READ MORE
+					</a>
+					<div class="l-front__ig-bar"></div>
+				</div>
+
 			</article>
 		</main><!-- #main -->
 	</div><!-- #primary -->

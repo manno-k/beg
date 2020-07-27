@@ -1,6 +1,7 @@
 .c-shop {
 	@extend .position-relative;
 	word-break: break-word;
+	@extend .mb-5;
 
 	&__item {
 		@extend .position-relative;
@@ -51,6 +52,7 @@ pc 用
 .c-shop-pc {
 	width: 80%;
 	@extend .mx-auto;
+	@extend .mb-5;
 
 	&__item {
 		@extend .d-flex;

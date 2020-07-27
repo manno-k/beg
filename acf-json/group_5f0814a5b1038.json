@@ -1,0 +1,298 @@
+{
+    "key": "group_5f0814a5b1038",
+    "title": "スタイル",
+    "fields": [
+        {
+            "key": "field_53642da4eb61d",
+            "label": "スタイル画像（大）",
+            "name": "style_img_main",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_53642dc6eb61e",
+            "label": "スタイル画像（side）",
+            "name": "style_img_side",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_53642de7eb61f",
+            "label": "スタイル画像（back）",
+            "name": "style_img_back",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_53642dfceb620",
+            "label": "コメント",
+            "name": "style_comment",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_53642e20eb621",
+            "label": "施術メニュー（自由入力）",
+            "name": "style_menu",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "formatting": "none",
+            "maxlength": ""
+        },
+        {
+            "key": "field_53642e3beb622",
+            "label": "イメージ",
+            "name": "style_image",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "image01": "フェミニン",
+                "image02": "エレガンス",
+                "image03": "ガーリー",
+                "image04": "クール",
+                "image05": "ナチュラル",
+                "image06": "ワイルド",
+                "image07": "カジュアル",
+                "image08": "モード"
+            },
+            "default_value": [],
+            "layout": "horizontal",
+            "allow_custom": 0,
+            "save_custom": 0,
+            "toggle": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_53642ec8eb623",
+            "label": "髪の量",
+            "name": "style_volume",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "volume01": "少ない",
+                "volume02": "普通",
+                "volume03": "多い"
+            },
+            "default_value": [],
+            "layout": "horizontal",
+            "allow_custom": 0,
+            "save_custom": 0,
+            "toggle": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_53642f24eb624",
+            "label": "髪質",
+            "name": "style_type",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "type01": "柔らかい",
+                "type02": "普通",
+                "type03": "硬い"
+            },
+            "default_value": [],
+            "layout": "horizontal",
+            "allow_custom": 0,
+            "save_custom": 0,
+            "toggle": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_53642f56eb625",
+            "label": "太さ",
+            "name": "style_thickness",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "thickness01": "細い",
+                "thickness02": "普通",
+                "thickness03": "太い"
+            },
+            "default_value": [],
+            "layout": "horizontal",
+            "allow_custom": 0,
+            "save_custom": 0,
+            "toggle": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_53642f90eb626",
+            "label": "顔の形",
+            "name": "style_shape",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "shape01": "卵形",
+                "shape02": "丸形",
+                "shape03": "面長",
+                "shape04": "三角形",
+                "shape05": "四角形"
+            },
+            "default_value": [],
+            "layout": "horizontal",
+            "allow_custom": 0,
+            "save_custom": 0,
+            "toggle": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_5368ecb93c691",
+            "label": "担当者名",
+            "name": "style_staff",
+            "type": "relationship",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "object",
+            "post_type": [
+                "shop_staff"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search"
+            ],
+            "max": "",
+            "min": 0,
+            "elements": [
+                "post_type"
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "hair_style"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "featured_image"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1595851305
+}

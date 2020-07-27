@@ -41,5 +41,29 @@ jQuery(function ($) {
       }
     ]
   });
+
+   $('.js-catalog').slick({
+    slidesToShow: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    dots: false,
+    arrows: true,
+    adaptiveHeight: false,
+    fade:true,
+    appendArrows: '.js-catalog__arrow',
+    prevArrow: '<button type=”button” class="prev">←</button>',
+    nextArrow: '<button type=”button” class="next">→</button>',
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          prevArrow: '<button type=”button” class="prev">←PREV</button>',
+          nextArrow: '<button type=”button” class="next">NEXT→</button>',
+        }
+      }
+    ]
+  });
+
+
 });
 
