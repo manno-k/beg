@@ -36,6 +36,9 @@ l-footer
 			li {
 				@include flex-basis(48%);
 				@extend .list-unstyled;
+				&:last-child{
+					@include flex-basis(100%);
+				}
 			}
 		}
 

@@ -40,6 +40,7 @@
 	&__img {
 		@extend .mb-3;
 		width: 200px;
+		height: 200px;
 		@include object-fit(contain);
 		@extend .mx-auto;
 	}

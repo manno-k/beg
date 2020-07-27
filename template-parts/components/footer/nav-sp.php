@@ -8,10 +8,6 @@
 		);
 		wp_nav_menu($defaults);
 	?>
-
-	<a href="<?php echo home_url('/hair_style'); ?>" class="l-footer__nav-item">
-		CATALOG
-	</a>
 	<a href="<?php the_field('reserve', 'Options'); ?>" class="l-footer__nav-item reserve" target="_blank">
 		24H RESERVED
 	</a>
