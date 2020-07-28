@@ -1,0 +1,165 @@
+.p-staff {
+
+	&__header {
+		@extend .position-relative;
+		background-color: $black;
+
+
+		&-wrap {
+			@extend .p-4;
+			@extend .p-xl-5;
+			max-width: $base-width__xl;
+			@extend .mx-auto;
+			@extend .d-flex;
+			@extend .flex-wrap;
+
+			&:before {
+				content: "";
+				@extend .position-absolute;
+				@extend .d-block;
+				width: 50%;
+				height: 1px;
+				background-color: $gold;
+				position: absolute;
+				top: 15%;
+				left: 60%;
+				transform: translate(-50%, -50%) rotate(-70deg);
+				@include media-breakpoint-up(xl){
+					top: 35%;
+					left: 50%;
+					transform: translate(-50%, -50%) rotate(50deg);
+				}
+			}
+		}
+
+		&-left {
+			@include flex-basis(100%);
+			@extend .pr-lg-5;
+			@extend .d-flex;
+			@extend .flex-wrap;
+
+			@include media-breakpoint-up(xl) {
+				@include flex-basis(50%);
+			}
+
+			h1 {
+				@extend .my-0;
+				font-family: $font-family-didot;
+				color: $white;
+				@include flex-basis(100%);
+				font-size: $fs-xl;
+				@include media-breakpoint-up(xl) {
+					padding-top: 4rem;
+					font-size: 140px;
+				}
+			}
+		}
+
+		&-right {
+			@extend .u-hidden-lg-down;
+			@include flex-basis(50%);
+		}
+	}
+
+	&__card {
+		@extend .d-flex;
+		@extend .flex-wrap;
+		color: $white;
+		@include flex-basis(100%);
+
+		&-left {
+			@include flex-basis(100%);
+			@include media-breakpoint-up(xl) {
+				@include flex-basis(40%);
+			}
+			@extend .mb-3;
+			@extend .mb-xl-5;
+			@extend .align-self-center;
+			@extend .text-center;
+			@extend .text-xl-left;
+			@include media-breakpoint-up(xl) {
+				padding-top: 4rem;
+			}
+
+			img {
+				@extend .position-relative;
+				z-index: 2;
+				@include object-fit(cover);
+				width: 100%;
+				max-width: 100px;
+				max-height: 100px;
+				@include media-breakpoint-up(xl) {
+					height: 18vw;
+					width: 18vw;
+					min-width: 150px;
+					max-width: 330px;
+					min-height: 150px;
+					max-height: 330px;
+				}
+
+			}
+		}
+
+		&-right {
+			@extend .align-self-end;
+			@extend .pl-3;
+			@include flex-basis(100%);
+			@include media-breakpoint-up(xl) {
+				@include flex-basis(60%);
+			}
+		}
+
+		&-jp {
+			font-size: $fs-sm;
+			@include media-breakpoint-up(xl) {
+				font-size: $fs-base;
+			}
+		}
+
+		&-en {
+			font-family: $font-family-didot;
+			border-bottom: 1px solid $white;
+			@extend .pb-2;
+			@extend .mb-3;
+			font-size: $fs-lg;
+			@include media-breakpoint-up(xl) {
+				font-size: $fs-xl;
+			}
+		}
+
+		&-comment {
+			font-size: $fs-sm;
+			@include media-breakpoint-up(xl) {
+				font-size: $fs-base;
+			}
+		}
+
+		&-btn {
+			@extend .d-block;
+			border: 1px solid $white;
+			@extend .p-2;
+			width: 260px;
+			@extend .text-center;
+			@include link_color($white) {
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__slider {
+		background-color: $gray-white;
+		@extend .p-5;
+		@extend .position-relative;
+
+		&:before {
+			@extend .position-absolute;
+			top: 50%;
+			content: 'HAIR STYLE';
+			letter-spacing: 10.5px;
+			font-family: $font-family-futura;
+			font-size: $fs-base;
+			transform: rotate(-90deg);
+			transform-origin: left;
+		}
+	}
+}

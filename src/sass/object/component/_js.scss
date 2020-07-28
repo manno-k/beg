@@ -28,13 +28,17 @@
 slick
  */
 
+
 // initialize前は非表示にする。
-.js-news {
+.js-news, .js-catalog, .js-front__shop, .js-staff-hair {
 	opacity: 0;
 
 	&.slick-initialized {
 		opacity: 1;
 	}
+}
+
+.js-news {
 
 	.slick-next:before, .slick-prev:before {
 		font-family: $font-family-base;
@@ -237,5 +241,42 @@ slick
 			top: 10%;
 			right: 0;
 		}
+	}
+}
+
+.js-staff-hair {
+	@extend .mx-auto;
+	max-width: $base-width__xl;
+	width: 85%;
+
+	img {
+		width: 20vw;
+		height: 20vw;
+		min-width: 150px;
+		min-height: 150px;
+		max-width: 290px;
+		max-height: 290px;
+		@include object-fit(cover);
+	}
+
+	.prev, .next {
+		@extend .position-absolute;
+		border: none;
+		background-color: transparent;
+		font-size: 2rem;
+		top: 50%;
+		z-index: 2;
+		@extend .p-0;
+		@extend .d-block;
+	}
+
+	.prev {
+		left: -3rem;
+		@include svg-arrow-left(39px, 27px);
+	}
+
+	.next {
+		right: -3rem;
+		@include svg-arrow-right(39px, 27px);
 	}
 }

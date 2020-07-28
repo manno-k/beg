@@ -27,7 +27,7 @@ jQuery(function ($) {
     dots: false,
     arrows: true,
     adaptiveHeight: false,
-    fade:true,
+    fade: true,
     appendArrows: '.js-front__shop-arrow',
     prevArrow: '<button type=”button” class="prev">←</button>',
     nextArrow: '<button type=”button” class="next">→</button>',
@@ -42,14 +42,14 @@ jQuery(function ($) {
     ]
   });
 
-   $('.js-catalog').slick({
+  $('.js-catalog').slick({
     slidesToShow: 1,
     autoplay: true,
     autoplaySpeed: 5000,
     dots: false,
     arrows: true,
     adaptiveHeight: false,
-    fade:true,
+    fade: true,
     appendArrows: '.js-catalog__arrow',
     prevArrow: '<button type=”button” class="prev">←</button>',
     nextArrow: '<button type=”button” class="next">→</button>',
@@ -59,6 +59,39 @@ jQuery(function ($) {
         settings: {
           prevArrow: '<button type=”button” class="prev">←PREV</button>',
           nextArrow: '<button type=”button” class="next">NEXT→</button>',
+        }
+      }
+    ]
+  });
+
+  $('.js-staff-hair').slick({
+    slidesToShow: 5,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    dots: false,
+    arrows: true,
+    adaptiveHeight: false,
+    prevArrow: '<button type=”button” class="prev"></button>',
+    nextArrow: '<button type=”button” class="next"></button>',
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 4,
+          prevArrow: '<button type=”button” class="prev"></button>',
+          nextArrow: '<button type=”button” class="next"></button>',
+        }
+      },
+      {
+        breakpoint: 1439,
+        settings: {
+          slidesToShow: 5,
         }
       }
     ]
