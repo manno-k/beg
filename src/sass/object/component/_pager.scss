@@ -1,0 +1,31 @@
+.c-pager {
+	.current, a {
+		border: 1px solid $black;
+		font-size: $fs-sm;
+		@extend .py-2;
+		@extend .px-3;
+	}
+	*:not(:last-child){
+		@extend .mr-1;
+	}
+
+	.current {
+		background-color: $black;
+		color: $white;
+	}
+
+	a {
+		transition: $transition-base;
+		@include link_color($black) {
+			text-decoration: none;
+		}
+		&:hover{
+			border: 1px solid $gray;
+			background-color: $gray;
+			color: $white;
+			transition: $transition-base;
+		}
+	}
+
+	@extend .mb-5;
+}

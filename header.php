@@ -53,11 +53,11 @@
 <?php
 	if (is_front_page() || is_home()) {
 		$header_class = 'l-header';
-	}else{
+	} else {
 		$header_class = 'l-header-other';
 	}
 ?>
-<header id="masthead" class="<?php echo $header_class;?>">
+<header id="masthead" class="<?php echo $header_class; ?>">
 	<div class="site-branding l-header__branding">
 		<?php
 			if (is_front_page() || is_home()) : ?>
@@ -78,21 +78,26 @@
 					?>
 				</p>
 			<?php else : ?>
-					<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-						<?php if (wp_is_mobile()) : ?>
-							<img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/assets/img/logo__sp.png" alt="<?php bloginfo('name'); ?>"/>
-						<?php else: ?>
-							<?php the_custom_logo(); ?>
-						<?php endif; ?>
-						<div class="sr-only"><?php bloginfo('name'); ?></div>
+				<a class="l-header-other__logo" href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+					<img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/assets/img/logo__sp.png" alt="<?php bloginfo('name'); ?>"/>
+					<div class="sr-only"><?php bloginfo('name'); ?></div>
+				</a>
+				<div class="l-header-other__menu">
+					<a href="https://facebook.com/blue.eyed.girl2015/" class="l-header-other__menu-btn" target="_blank">
+						ラジオ番組
 					</a>
+					<a href="https://www.facebook.com/tuyagamiproject/" class="l-header-other__menu-btn" target="_blank">
+						ツヤ髪プロジェクト
+					</a>
+					<a href="<?php the_field('member', 'Options') ?>" target="_blank">
+						MEMBER
+					</a>
+				</div>
 			<?php endif; ?>
 	</div><!-- .site-branding -->
 	<?php
 		if (is_front_page() || is_home()) :
 			get_template_part('template-parts/components/header/header', 'top');
-		else:
-			get_template_part('template-parts/components/header/header', 'other');
 		endif;
 	?>
 

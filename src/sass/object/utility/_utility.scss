@@ -49,6 +49,12 @@ text
 	white-space: nowrap;
 }
 
+.u-title {
+	@extend .text-center;
+	font-size: $fs-xxl *1.5;
+	font-family: $font-family-didot;
+}
+
 /*
 link styles
  */

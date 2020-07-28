@@ -39,6 +39,7 @@ Theme Sass file
 @import "object/component/shop";
 @import "object/component/totop";
 @import "object/component/sns";
+@import "object/component/pager";
 // layout
 @import "layout/header";
 @import "layout/footer";
@@ -47,6 +48,9 @@ Theme Sass file
 // project
 @import "object/project/nav";
 @import "object/project/sidebar";
+@import "object/project/blog";
+@import "object/project/hair";
+@import "object/project/single";
 
 :root{
 	font-size: $fs-base;

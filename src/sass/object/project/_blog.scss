@@ -1,0 +1,122 @@
+.p-blog {
+
+	&__wrap {
+		width: 100%;
+		@extend .mx-auto;
+		@include media-breakpoint-up(lg) {
+			width: 90%;
+		}
+	}
+
+	&__pager-top {
+		@extend .text-right;
+		@extend .u-hidden-md-down;
+	}
+
+	&__pager-bottom {
+		@extend .text-center;
+	}
+
+	&__section {
+		@extend .d-flex;
+		@extend .flex-wrap;
+		@extend .justify-content-between;
+		@extend .mb-5;
+		border-bottom: 1px solid $black;
+		@extend .px-4;
+		@extend .px-lg-0;
+	}
+
+	&__card {
+		@include flex-basis(100%);
+		@include media-breakpoint-up(md) {
+			@include flex-basis(32%);
+		}
+		@include media-breakpoint-up(lg) {
+			@include flex-basis(24%);
+
+		}
+		@include media-breakpoint-up(xl) {
+			@include flex-basis(15%);
+		}
+
+		&:not(.empty) {
+			margin-bottom: 2rem;
+		}
+
+		a {
+			@include link_color($black) {
+				text-decoration: none;
+			}
+		}
+
+		&-thumb {
+			@extend .position-relative;
+			@extend .mb-2;
+
+			img {
+				transition: $transition-base;
+				height: 300px;
+				width: 100%;
+				@include object-fit(cover);
+			}
+
+			a {
+				&:before {
+					transition: $transition-base;
+					content: "READ";
+					@extend .position-absolute;
+					z-index: 2;
+					@extend .d-block;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					border: 1px solid $white;
+					@extend .rounded-circle;
+					letter-spacing: .5em;
+					width: 70px;
+					height: 70px;
+					line-height: 70px;
+					color: $white;
+					font-size: 10px;
+					@extend .text-center;
+					opacity: 0;
+				}
+
+				&:hover {
+					img {
+						transition: $transition-base;
+						opacity: .5;
+					}
+
+					&:before {
+						transition: $transition-base;
+						opacity: 1;
+					}
+				}
+			}
+
+		}
+
+		&-desc {
+			time, p {
+				font-size: $fs-sm;
+				color: $gray;
+			}
+
+			time {
+				@extend .d-block;
+				@extend .mb-2;
+			}
+
+			h2 {
+				font-size: $fs-base;
+				@extend .mb-3;
+			}
+
+			p {
+				@extend .mb-0;
+			}
+		}
+	}
+}

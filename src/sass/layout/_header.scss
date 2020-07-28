@@ -53,7 +53,7 @@ l-header top
 		padding-bottom: .5rem;
 
 		img {
-			width: 200px;
+			width: 250px;
 		}
 	}
 
@@ -175,9 +175,63 @@ l-header top
 header other
  */
 
-.l-header-other{
+.l-header-other {
 	background-color: $black;
-	.l-header__branding{
+
+	.l-header__branding {
 		@extend .position-relative;
+		align-self: center;
+		@extend .d-flex;
+		@extend .flex-wrap;
+		@extend .justify-content-between;
+		@include flex-basis(90%);
+		background-color: $black;
+		height: 10vw;
+		min-height: 60px;
+		max-height: 120px;
+
+		&:before {
+			content: none;
+		}
+	}
+
+	&__logo, &__menu {
+		@extend .align-self-center;
+	}
+
+	&__logo {
+		@include flex-basis(100%);
+		@include media-breakpoint-up(lg) {
+			@include flex-basis(40%);
+		}
+
+		img {
+			width: 30vw;
+			min-width: 150px;
+			max-width: 300px;
+			vertical-align: center;
+		}
+	}
+
+	&__menu {
+		@extend .d-flex;
+		@extend .flex-wrap;
+		@extend .justify-content-between;
+		@extend .u-hidden-md-down;
+		@include flex-basis(60%);
+
+		a {
+			@extend .text-center;
+			@include flex-basis(32%);
+			border: 1px solid $white;
+			@extend .py-2;
+			@include link_color($white) {
+				text-decoration: none;
+			}
+		}
+
+		&-btn {
+
+		}
 	}
 }
