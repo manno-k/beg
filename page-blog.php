@@ -27,7 +27,7 @@
 					$paged    = get_query_var('paged') ? get_query_var('paged') : 1;
 					$my_query = new WP_Query(array(
 						'paged'          => $paged,
-						'posts_per_page' => 7
+						'posts_per_page' => 12
 					));
 				?>
 				<nav class="p-blog__pager-top c-pager">
