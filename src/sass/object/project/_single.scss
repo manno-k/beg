@@ -126,7 +126,7 @@ $single_max_width: 1563px;
 			letter-spacing: 6.75px;
 			@extend .d-block;
 			@extend .d-lg-inline-block;
-			@include media-breakpoint-up(lg){
+			@include media-breakpoint-up(lg) {
 				vertical-align: bottom;
 			}
 		}
@@ -152,6 +152,8 @@ $single_max_width: 1563px;
 			background-color: $gray-white;
 			@extend .py-2;
 			@include flex-basis(68%);
+			@extend .d-flex;
+			@extend .justify-content-center;
 		}
 
 		&-link {

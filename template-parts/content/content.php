@@ -55,7 +55,8 @@
 			</nav>
 
 			<div class="p-single__footer-title">
-				<?php the_title(); ?>
+				<div class="align-self-center"><?php the_title(); ?></div>
+
 			</div>
 
 			<nav class="p-single__footer-link next">
