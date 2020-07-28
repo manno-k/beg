@@ -16,8 +16,12 @@
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main p-blog">
-			<h1 class="u-title">Lasted Post</h1>
 			<article class="p-blog__wrap">
+				<header class="u-title u-title__blog">
+					<div class="u-title__wrap">
+						<h1 class="u-title__text">Lasted Post</h1>
+					</div>
+				</header>
 
 				<?php
 					$paged    = get_query_var('paged') ? get_query_var('paged') : 1;

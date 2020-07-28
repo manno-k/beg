@@ -129,6 +129,7 @@ c-nav
 				bottom: .5em;
 				right: .5em;
 				@include svg-schroll;
+				@extend .u-hidden-lg-up;
 			}
 
 			a {

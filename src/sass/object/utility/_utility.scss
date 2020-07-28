@@ -50,9 +50,23 @@ text
 }
 
 .u-title {
+	@extend .mb-5;
 	@extend .text-center;
-	font-size: $fs-xxl *1.5;
+	@extend .text-lg-left;
 	font-family: $font-family-didot;
+	color: $black;
+	@include media-breakpoint-up(lg) {
+		font-size: $fs-xxl *1.5;
+		color: $white;
+	}
+
+	&__blog {
+		@include media-breakpoint-up(lg) {
+			background: url('assets/img/bg/bg-blog.png') center no-repeat;
+			background-size: cover;
+			padding: 3rem 0 4rem 5rem;
+		}
+	}
 }
 
 /*

@@ -5,20 +5,20 @@
 // font-size
 
 $fs-base: 16px;
-$fs-sm: 0.75em;
-$fs-md: 1.2em;
-$fs-lg: 1.6em;
-$fs-xl: 2em;
-$fs-xxl: 2.3em;
+$fs-sm: 0.75em; //12px
+$fs-md: 1.25em; //20px
+$fs-lg: 1.6em; //25px
+$fs-xl: 2em; //32px
+$fs-xxl: 2.3em; //37px
 
 //base-letter-spacing
-$base-letter-spacing:5.4px;
+$base-letter-spacing: 5.4px;
 
 // base-font
 
-$font-family-gothic: a-otf-ud-shin-maru-go-pr6n,-apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif !default;
-$font-family-futura:futura-pt,sans-serif;
-$font-family-didot:linotype-didot,sans-serif;
+$font-family-gothic: a-otf-ud-shin-maru-go-pr6n, -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif !default;
+$font-family-futura: futura-pt, sans-serif;
+$font-family-didot: linotype-didot, sans-serif;
 $font-family-mincho: Georgia, 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", HGS明朝E, メイリオ, Meiryo, serif !default;
 $font-family-base: $font-family-gothic;
 
