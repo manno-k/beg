@@ -79,7 +79,7 @@
 				</p>
 			<?php else : ?>
 				<a class="l-header-other__logo" href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-					<img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/assets/img/logo__sp.png" alt="<?php bloginfo('name'); ?>"/>
+					<img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/assets/img/logo__other.png" alt="<?php bloginfo('name'); ?>"/>
 					<div class="sr-only"><?php bloginfo('name'); ?></div>
 				</a>
 				<div class="l-header-other__menu">
@@ -93,6 +93,9 @@
 						MEMBER
 					</a>
 				</div>
+				<a class="l-header__reserve" href="<?php the_field('reserve', 'Options'); ?>">
+					24H RESERVED
+				</a>
 			<?php endif; ?>
 	</div><!-- .site-branding -->
 	<?php

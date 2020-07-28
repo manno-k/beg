@@ -95,7 +95,7 @@
 		@extend .pb-3;
 		@extend .mx-auto;
 		border-bottom: 2px solid $gold;
-		@include max-content;
+		@include fit-content;
 		font-size: $fs-sm;
 		margin-bottom: 3rem;
 		@include media-breakpoint-up(lg) {

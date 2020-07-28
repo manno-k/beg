@@ -1,0 +1,191 @@
+$single_max_width: 1563px;
+
+.p-single {
+	@extend .py-5;
+
+	&__header {
+		color: $white;
+		width: 90%;
+		@extend .mx-auto;
+	}
+
+	&__wrap {
+		max-width: $single_max_width;
+		padding: 2rem;
+		@include media-breakpoint-up(lg) {
+			padding: 3rem 0 4rem 5rem;
+		}
+
+		h1 {
+			font-size: $fs-base;
+			letter-spacing: 7.2px;
+			line-height: 2em;
+			@include media-breakpoint-up(lg) {
+				font-size: $fs-xxl;
+			}
+
+			&:before {
+				@extend .d-inline-block;
+				@include svg-icon-arrow(1rem, 2rem);
+				vertical-align: -1px;
+				@extend .mr-3;
+				@include media-breakpoint-up(lg) {
+					content: "";
+				}
+			}
+		}
+
+		time {
+			letter-spacing: 8.1px;
+			font-size: $fs-sm;
+			@include media-breakpoint-up(lg) {
+				font-size: $fs-base;
+			}
+		}
+	}
+
+	&__content {
+		@extend .mx-auto;
+		width: 90%;
+		padding: 0 1.5rem;
+		@include media-breakpoint-up(lg) {
+			padding: 0 5rem;
+		}
+
+		img {
+			box-shadow: 0 3px 6px #00000029;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			@include fit-content;
+		}
+
+		h1, h2 {
+			font-size: $fs-xl;
+			color: $white;
+			background-color: $black;
+			@extend .py-2;
+			@extend .px-3;
+		}
+
+		h3 {
+			font-size: $fs-lg;
+			@extend .px-3;
+			@extend .pb-1;
+			border-bottom: 1px dashed $black;
+		}
+
+		h4 {
+			@extend .position-relative;
+			font-size: $fs-md;
+			padding: 0 3rem 0 1rem;
+
+			&:before, &:after {
+				@extend .position-absolute;
+				@extend .d-block;
+				content: "";
+				top: 50%;
+				transform: translate(-50%, 0%);
+				background-color: $gold;
+				height: 1px;
+				width: 1.5rem;
+				z-index: 1;
+			}
+
+			&:before {
+				left: 0;
+			}
+
+			&:after {
+				right: 0;
+			}
+		}
+
+		h5 {
+			font-size: $fs-base * 1.2;
+			color: $gold;
+		}
+
+		a {
+			@include link_color($blue);
+		}
+	}
+
+	&__author {
+		@extend .text-center;
+		@extend .text-lg-left;
+
+		img {
+			@extend .mb-3;
+		}
+
+		p {
+			font-family: $font-family-futura;
+			font-size: $fs-sm;
+			color: $gray;
+			letter-spacing: 6.75px;
+			@extend .d-block;
+			@extend .d-lg-inline-block;
+			@include media-breakpoint-up(lg){
+				vertical-align: bottom;
+			}
+		}
+	}
+
+	&__footer {
+		max-width: $single_max_width;
+		border-top: 1px solid $black;
+		@extend .pt-3;
+		@extend .pt-lg-5;
+		@extend .text-center;
+
+		&-wrap {
+			width: 90%;
+			@extend .mx-auto;
+			@extend .d-flex;
+			@extend .flex-wrap;
+			@extend .justify-content-between;
+		}
+
+		&-title {
+			@extend .u-hidden-md-down;
+			background-color: $gray-white;
+			@extend .py-2;
+			@include flex-basis(68%);
+		}
+
+		&-link {
+			letter-spacing: 8px;
+
+			@include flex-basis(49%);
+			@include media-breakpoint-up(lg) {
+				@include flex-basis(15%);
+			}
+
+			a {
+				@extend .d-block;
+				background-color: $black;
+				@extend .p-3;
+				font-size: $fs-sm;
+				@include link_color($white) {
+					text-decoration: none;
+				}
+				@include media-breakpoint-up(xl) {
+					font-size: $fs-base;
+				}
+				transition: $transition-base;
+			}
+
+			&.next a {
+				outline: 1px solid $black;
+				background-color: $white;
+				@include link_color($black);
+				@include media-breakpoint-up(lg) {
+					background-color: $black;
+					outline: none;
+					@include link_color($white);
+				}
+			}
+		}
+	}
+}

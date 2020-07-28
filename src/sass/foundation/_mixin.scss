@@ -74,10 +74,10 @@ object-fit
 }
 
 /*
-max-content
+fit-content
  */
-@mixin max-content {
-	width: max-content;
+@mixin fit-content {
+	width: fit-content;
 	// ieが対応していないため、table-cellを指定
 	@include ie_only {
 		display: table-cell;
