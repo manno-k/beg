@@ -188,7 +188,7 @@
 				<section class="l-front__ig">
 					<h2>Latest Posts</h2>
 					<div class="l-front__ig-feed">
-						<?php echo do_shortcode('[wp_my_instagram username="kazu_tasty" limit="4" layout="4" size="large" link="" target="_blank"]'); ?>
+						<?php echo do_shortcode('[wp_my_instagram username="2015BLUE.EYED.GIRL" limit="4" layout="4" size="large" link="" target="_blank"]'); ?>
 					</div>
 				</section>
 				<div class="l-front__ig-more">

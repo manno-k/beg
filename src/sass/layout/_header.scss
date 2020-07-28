@@ -1,5 +1,5 @@
 /*
-l-header
+l-header top
  */
 .l-header {
 	@extend .position-relative;
@@ -171,3 +171,13 @@ l-header
 	}
 }
 
+/*
+header other
+ */
+
+.l-header-other{
+	background-color: $black;
+	.l-header__branding{
+		@extend .position-relative;
+	}
+}
