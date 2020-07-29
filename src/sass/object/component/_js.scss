@@ -245,18 +245,29 @@ slick
 }
 
 .js-staff-hair {
-	@extend .mx-auto;
+	@extend .ml-auto;
+	@extend .mx-lg-auto;
 	max-width: $base-width__xl;
-	width: 85%;
+	width: 70%;
+	@include media-breakpoint-up(lg){
+		width: 85%;
+	}
 
 	img {
+		@extend .mx-auto;
+		@include object-fit(cover);
 		width: 20vw;
 		height: 20vw;
-		min-width: 150px;
-		min-height: 150px;
-		max-width: 290px;
-		max-height: 290px;
-		@include object-fit(cover);
+		min-width: 70px;
+		min-height: 70px;
+		@include media-breakpoint-up(lg){
+			width: 20vw;
+			height: 20vw;
+			min-width: 150px;
+			min-height: 150px;
+			max-width: 290px;
+			max-height: 290px;
+		}
 	}
 
 	.prev, .next {
@@ -264,19 +275,34 @@ slick
 		border: none;
 		background-color: transparent;
 		font-size: 2rem;
-		top: 50%;
+		bottom: -30%;
 		z-index: 2;
 		@extend .p-0;
 		@extend .d-block;
+		@include media-breakpoint-up(md){
+			bottom: -20%;
+		}
+		@include media-breakpoint-up(lg){
+			top: 50%;
+			bottom: auto;
+		}
 	}
 
 	.prev {
-		left: -3rem;
-		@include svg-arrow-left(39px, 27px);
+		left: 0;
+		@include svg-arrow-left__text(80px,15px);
+		@include media-breakpoint-up(lg){
+			left: -3rem;
+			@include svg-arrow-left(39px, 27px);
+		}
 	}
 
 	.next {
-		right: -3rem;
-		@include svg-arrow-right(39px, 27px);
+		right: 0;
+		@include svg-arrow-right__text(80px,15px);
+		@include media-breakpoint-up(lg){
+			right: -3rem;
+			@include svg-arrow-right(39px, 27px);
+		}
 	}
 }

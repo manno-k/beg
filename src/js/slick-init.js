@@ -75,7 +75,7 @@ jQuery(function ($) {
     nextArrow: '<button type=”button” class="next"></button>',
     responsive: [
       {
-        breakpoint: 767,
+        breakpoint: 769,
         settings: {
           slidesToShow: 3,
         }
@@ -83,17 +83,23 @@ jQuery(function ($) {
       {
         breakpoint: 1199,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           prevArrow: '<button type=”button” class="prev"></button>',
           nextArrow: '<button type=”button” class="next"></button>',
         }
       },
       {
-        breakpoint: 1439,
+        breakpoint: 1441,
         settings: {
-          slidesToShow: 5,
+          slidesToShow: 4,
         }
-      }
+      },
+      {
+        breakpoint: 1921,
+        settings: {
+          slidesToShow: 5
+        }
+      },
     ]
   });
 

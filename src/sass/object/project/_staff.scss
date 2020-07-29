@@ -24,7 +24,7 @@
 				top: 15%;
 				left: 60%;
 				transform: translate(-50%, -50%) rotate(-70deg);
-				@include media-breakpoint-up(xl){
+				@include media-breakpoint-up(xl) {
 					top: 35%;
 					left: 50%;
 					transform: translate(-50%, -50%) rotate(50deg);
@@ -109,6 +109,11 @@
 			}
 		}
 
+		&-jp, &-en {
+			@extend .text-center;
+			@extend .text-xl-left;
+		}
+
 		&-jp {
 			font-size: $fs-sm;
 			@include media-breakpoint-up(xl) {
@@ -148,18 +153,133 @@
 
 	&__slider {
 		background-color: $gray-white;
-		@extend .p-5;
+		@extend .px-2;
+		@extend .py-5;
+		@extend .p-lg-5;
 		@extend .position-relative;
 
 		&:before {
 			@extend .position-absolute;
-			top: 50%;
+			top: 85%;
+			font-size: $fs-sm;
 			content: 'HAIR STYLE';
 			letter-spacing: 10.5px;
 			font-family: $font-family-futura;
-			font-size: $fs-base;
 			transform: rotate(-90deg);
 			transform-origin: left;
+			@include media-breakpoint-up(lg) {
+				font-size: $fs-base;
+				top: 70%;
+			}
+			@include media-breakpoint-up(xl) {
+				top: 50%;
+			}
+		}
+	}
+
+	&__other {
+		@extend .position-relative;
+		background-color: $black;
+	}
+
+	&__recruit {
+		@extend .position-relative;
+		@extend .py-4;
+		@extend .py-lg-5;
+		@extend .px-1;
+
+		&-title {
+			font-size: $fs-xl;
+			font-family: $font-family-didot;
+			@extend .pl-5;
+			@extend .pl-lg-0;
+			@include media-breakpoint-up(lg) {
+				position: absolute;
+				font-size: 140px;
+				transform: rotate(-90deg);
+				transform-origin: left;
+				top: 43%;
+				left: 10%;
+			}
+		}
+
+		&-card {
+			@extend .position-relative;
+			@extend .mb-3;
+			border: 4px solid $black;
+			padding: 1rem;
+			font-size: $fs-sm;
+			line-height: 2em;
+			width: 100%;
+			@include media-breakpoint-up(lg) {
+				width: 80%;
+				margin-left: auto;
+				padding: 3rem 3rem 3rem 8rem;
+			}
+
+			.num {
+				@extend .position-absolute;
+				top: .25em;
+				right: .25em;
+				font-family: $font-family-didot;
+				font-size: $fs-xl;
+				@include media-breakpoint-up(lg) {
+					font-size: $fs-xxl * 3;
+					top: 85%;
+					right: 95%;
+				}
+			}
+
+			h3, h4 {
+				font-size: $fs-base;
+			}
+
+			h4, p {
+				@extend .mb-3;
+			}
+
+			h3 {
+				margin-bottom: 1rem;
+				@include media-breakpoint-up(lg) {
+					font-size: $fs-xxl;
+					border-bottom: 1px solid $black;
+					padding-bottom: .5em;
+					margin-bottom: 3rem;
+				}
+
+				&:before {
+					@extend .d-inline-block;
+					@include svg-icon-arrow__black(22px, 13px);
+					vertical-align: 3px;
+					@include media-breakpoint-up(lg) {
+						content: "";
+					}
+				}
+			}
+
+			h4 {
+				border: 1px solid $black;
+				@extend .p-2;
+				@extend .text-center;
+			}
+
+			a {
+				@include link_color($blue);
+			}
+
+			table {
+				th, td {
+					display: block;
+					@include media-breakpoint-up(lg) {
+						display: table-cell;
+						vertical-align: top;
+					}
+				}
+
+				td {
+					@extend .pl-3;
+				}
+			}
 		}
 	}
 }

@@ -21,7 +21,20 @@ if( function_exists('acf_add_options_page') ) {
 		'redirect'	=> false,
 	));
 
+	acf_add_options_page(array(
+		'page_title' 	=> '求人情報',
+		'menu_title'	=> '求人情報',
+		'menu_slug' 	=> 'recruit',
+		'capability'	=> 'edit_posts',
+		'parent_slug'	=> '',
+		'position'	=> false,
+		'redirect'	=> false,
+	));
+
+
 }
+
+
 
 /**
  * ACF JSON 保存先

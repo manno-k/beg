@@ -16,7 +16,7 @@
                 "id": ""
             },
             "return_format": "id",
-            "preview_size": "full",
+            "preview_size": "medium",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -40,7 +40,7 @@
                 "id": ""
             },
             "return_format": "id",
-            "preview_size": "full",
+            "preview_size": "medium",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -64,7 +64,7 @@
                 "id": ""
             },
             "return_format": "id",
-            "preview_size": "full",
+            "preview_size": "medium",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -284,7 +284,7 @@
     ],
     "menu_order": 0,
     "position": "acf_after_title",
-    "style": "seamless",
+    "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
@@ -294,5 +294,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1595851305
+    "modified": 1596005909
 }
