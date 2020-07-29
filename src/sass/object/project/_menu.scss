@@ -1,0 +1,7 @@
+.p-menu {
+	&__nav {
+		@extend .u-hidden-lg-up;
+		@extend .w-100;
+		border: 2px solid $black;
+	}
+}
