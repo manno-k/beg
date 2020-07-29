@@ -364,8 +364,11 @@
 									<?php endif; ?>
 
 								<?php endif; ?>
-							<img class="w-100" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/assets/img/menu/shampoo/img01.png" alt="トリートメント"/>
-							<img class="w-100" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/assets/img/menu/shampoo/img02.png" alt="トリートメント"/>
+							<div class="p-menu__shampoo-img">
+								<img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/assets/img/menu/shampoo/img01.png" alt="トリートメント"/>
+								<img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/assets/img/menu/shampoo/img02.png" alt="トリートメント"/>
+							</div>
+
 						</div>
 					</div>
 

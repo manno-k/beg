@@ -161,6 +161,7 @@
 		@extend .position-relative;
 		@extend .px-1;
 		@extend .mb-3;
+		@extend .mb-xl-5;
 		letter-spacing: 5.4px;
 		line-height: 20px;
 		@include media-breakpoint-up(xl) {
@@ -184,23 +185,26 @@
 					transform-origin: left;
 					left: -5rem;
 				}
+				@media (min-width: 1440px) {
+					left: -10rem;
+				}
 			}
 
 
 			&.cut, &.set, &.spa {
-				top: 10rem;
+				top: 12rem;
 			}
 
 			&.color {
-				top: 18rem;
+				top: 20rem;
 			}
 
 			&.perm {
-				top: 16rem;
+				top: 18rem;
 			}
 
 			&.shampoo {
-				top: 38rem;
+				top: 40rem;
 				line-height: .8em;
 				left: -7rem;
 			}
@@ -237,11 +241,18 @@
 				}
 			}
 
-			&.color, &.shampoo {
+			&.color {
+				@include media-breakpoint-up(xl) {
+					padding-bottom: 23rem;
+				}
+			}
+
+			&.shampoo {
 				@include media-breakpoint-up(xl) {
 					padding-bottom: 17rem;
 				}
 			}
+
 
 		}
 
@@ -326,11 +337,12 @@
 		@include media-breakpoint-up(xl) {
 			max-width: 190px;
 			position: absolute;
-			bottom: 1%;
+			bottom: 3%;
 			left: -25%;
 		}
 		@media (min-width: 1440px) {
 			left: -22%;
+			bottom: 2%;
 		}
 	}
 
@@ -354,8 +366,11 @@
 	&__shampoo {
 		@extend .mb-3;
 
-		img {
-			max-width: 600px;
+
+		&-img {
+			@extend .w-100;
+			@extend .text-center;
+			max-width: 800px;
 			@extend .mx-auto;
 		}
 
