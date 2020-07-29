@@ -1,7 +1,375 @@
 .p-menu {
+
+	&__wrap {
+		max-width: $base-width__xl;
+		@extend .mx-auto;
+	}
+
+	h1 {
+		@extend .mb-0;
+	}
+
+	h3, p {
+		font-size: $fs-sm;
+		@include media-breakpoint-up(xl) {
+			font-size: $fs-base;
+		}
+	}
+
 	&__nav {
-		@extend .u-hidden-lg-up;
-		@extend .w-100;
-		border: 2px solid $black;
+		@extend .u-hidden-xl-up;
+
+		select {
+			@extend .w-100;
+			border: 2px solid $black;
+			@extend .px-3;
+			@extend .py-2;
+			letter-spacing: 8px;
+			border-radius: 0;
+		}
+
+		&-pc {
+			@extend .u-hidden-md-down;
+			@extend .position-fixed;
+			width: 20%;
+			top: 20%;
+			right: -2%;
+
+			h2 {
+				font-family: $font-family-didot;
+				font-size: $fs-lg;
+			}
+
+			a {
+				@include link_color(black) {
+					text-decoration: none;
+				}
+
+				&:before {
+					content: "■";
+					color: $gold;
+					@extend .d-block;
+				}
+			}
+		}
+	}
+
+	&__container {
+		@extend .position-relative;
+		@include media-breakpoint-up(xl) {
+			width: 80%;
+		}
+
+		&:before {
+			@extend .d-block;
+			@extend .position-absolute;
+			top: 0;
+			left: 0;
+			@include svg-menu-logo(20vw, 30vw);
+			max-width: 388px;
+			max-height: 596px;
+			z-index: 2;
+			@include media-breakpoint-up(xl) {
+				content: "";
+			}
+		}
+	}
+
+	&__recommend {
+		@extend .position-relative;
+		background-color: $gray-white;
+		padding-top: 5rem;
+		@extend .pt-xl-5;
+		@extend .px-4;
+		@extend .pb-5;
+		@extend .px-xl-0;
+		@include media-breakpoint-up(xl) {
+			width: 80%;
+			margin-left: auto;
+		}
+
+		&:before {
+			@extend .position-absolute;
+			content: "";
+			@extend .d-block;
+			background: url("assets/img/front/catalog/catalog-title__sp.png") center no-repeat;
+			background-size: contain;
+			width: 90px;
+			height: 100px;
+			top: -5%;
+			@include media-breakpoint-up(xl) {
+				content: none;
+			}
+		}
+
+		&-inner {
+			@include media-breakpoint-up(xl) {
+				width: 85%;
+				margin-left: auto;
+			}
+
+			h2 {
+				font-size: $fs-base;
+				border: 1px solid $black;
+				@extend .p-2;
+				@extend .mb-xl-3;
+				@include media-breakpoint-up(xl) {
+					border: 0;
+					font-size: $fs-xxl;
+
+				}
+
+				&:before {
+					@extend .d-inline-block;
+					@include svg-icon-arrow__black(22px, 13px);
+					vertical-align: 3px;
+					@extend .mr-2;
+					@include media-breakpoint-up(xl) {
+						content: "";
+					}
+				}
+			}
+
+			h3 {
+				background-color: $black;
+				@extend .py-2;
+				@extend .px-3;
+				color: $white;
+				font-family: $font-family-futura;
+				letter-spacing: 8.25px;
+			}
+
+			p {
+				@extend .px-xl-4;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+
+		&-desc {
+			@extend .py-3;
+			@extend .px-4;
+			@extend .px-xl-0;
+			@extend .text-xl-right;
+		}
+	}
+
+	&__card {
+		@extend .position-relative;
+		@extend .px-1;
+		@extend .mb-3;
+		letter-spacing: 5.4px;
+		line-height: 20px;
+		@include media-breakpoint-up(xl) {
+			line-height: 2rem;
+			letter-spacing: 6px;
+			width: 80%;
+			margin-left: auto;
+		}
+
+		h2 {
+			font-family: $font-family-didot;
+			font-size: $fs-xl;
+			@include media-breakpoint-up(xl) {
+				position: absolute;
+				font-size: 140px;
+			}
+
+			&:not(.vip) {
+				@include media-breakpoint-up(xl) {
+					transform: rotate(-90deg);
+					transform-origin: left;
+					left: -5rem;
+				}
+			}
+
+
+			&.cut, &.set, &.spa {
+				top: 10rem;
+			}
+
+			&.color {
+				top: 18rem;
+			}
+
+			&.perm {
+				top: 16rem;
+			}
+
+			&.shampoo {
+				top: 38rem;
+				line-height: .8em;
+				left: -7rem;
+			}
+
+			&.vip {
+				bottom: -1rem;
+				left: 2rem;
+			}
+		}
+
+		&-inner {
+			padding: 1rem;
+			border: 4px solid $black;
+			@include media-breakpoint-up(lg) {
+				padding: 3rem 4rem;
+				border: 12px solid $black;
+			}
+
+			h3 {
+				font-size: $fs-base;
+				@include media-breakpoint-up(lg) {
+					font-size: $fs-xxl;
+					margin-bottom: 2rem;
+				}
+
+				&:before {
+					@extend .d-inline-block;
+					@include svg-icon-arrow__black(20px, 12px);
+					vertical-align: .1em;
+					@extend .mr-2;
+					@include media-breakpoint-up(xl) {
+						content: "";
+					}
+				}
+			}
+
+			&.color, &.shampoo {
+				@include media-breakpoint-up(xl) {
+					padding-bottom: 17rem;
+				}
+			}
+
+		}
+
+		&-info {
+			border-bottom: 1px dashed $black;
+			@extend .pb-3;
+			@include media-breakpoint-up(xl) {
+				padding-left: 1rem;
+			}
+
+			&-bottom {
+				color: $gold;
+				@include media-breakpoint-up(xl) {
+					text-indent: 1rem;
+				}
+			}
+		}
+
+		&-list {
+			@extend .ml-0;
+			@extend .pl-3;
+			list-style-type: square;
+
+			li {
+				font-size: $fs-sm;
+				@include media-breakpoint-up(xl) {
+					font-size: $fs-base;
+				}
+
+				span {
+					@include flex-basis(60%);
+
+					&:last-child {
+						@include flex-basis(40%);
+						@extend .text-right;
+					}
+				}
+			}
+
+			li.empty {
+				list-style: none;
+				height: $fs-sm;
+				@include media-breakpoint-up(xl) {
+					height: $fs-base;
+				}
+			}
+
+			&.bottom {
+				list-style-type: circle;
+				color: $gray-black;
+			}
+		}
+
+
+		&-vip {
+			@include media-breakpoint-up(xl) {
+				padding-bottom: 10rem;
+			}
+
+			.thumb {
+				@extend .d-flex;
+				@extend .justify-content-between;
+				@extend .mb-3;
+
+				span {
+					@include flex-basis(48%);
+				}
+			}
+
+			.desc {
+				font-size: $fs-sm;
+				@include media-breakpoint-up(xl) {
+					font-size: $fs-base;
+				}
+			}
+		}
+	}
+
+	&__color, &__shampoo {
+		width: 80%;
+		@extend .mx-auto;
+		@include media-breakpoint-up(xl) {
+			max-width: 190px;
+			position: absolute;
+			bottom: 1%;
+			left: -25%;
+		}
+		@media (min-width: 1440px) {
+			left: -22%;
+		}
+	}
+
+	&__color {
+		@extend .text-center;
+		@extend .text-xl-left;
+
+
+		img {
+			width: 100%;
+			height: auto;
+			max-width: 140px;
+			@extend .mx-auto;
+		}
+
+		&-title {
+			color: $gold;
+		}
+	}
+
+	&__shampoo {
+		@extend .mb-3;
+
+		img {
+			max-width: 600px;
+			@extend .mx-auto;
+		}
+
+		&-step {
+			@extend .text-center;
+			font-size: $fs-sm;
+			@extend .py-2;
+			@extend .py-1;
+			color: $white;
+			background-color: $black;
+			@extend .mb-3;
+			@include media-breakpoint-up(lg) {
+				letter-spacing: .2rem;
+			}
+		}
 	}
 }

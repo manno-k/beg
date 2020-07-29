@@ -60,12 +60,15 @@ text
 		color: $white;
 	}
 
-	@each $page in blog,menu{
+	@each $page in blog, menu {
 		&__#{$page} {
 			@include media-breakpoint-up(lg) {
 				background: url('assets/img/bg/bg-#{$page}.png') center no-repeat;
 				background-size: cover;
 				padding: 3rem 0 4rem 5rem;
+				@if $page == menu {
+					color: $black;
+				}
 			}
 		}
 	}
