@@ -53,6 +53,8 @@ Theme Sass file
 @import "object/project/single";
 @import "object/project/staff";
 @import "object/project/menu";
+@import "object/project/salon";
+@import "object/project/catalog";
 
 :root{
 	font-size: $fs-base;
@@ -81,4 +83,7 @@ textarea {
 dl, dt, dd {
 	margin: 0;
 	padding: 0;
+}
+button:focus {
+	outline:0;
 }

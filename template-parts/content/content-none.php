@@ -1,50 +1,69 @@
 <?php
-/**
- * Template part for displaying a message that posts cannot be found
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package wordpress_template
- */
+	/**
+	 * Template part for displaying posts
+	 *
+	 * @link    https://developer.wordpress.org/themes/basics/template-hierarchy/
+	 *
+	 * @package wordpress_template
+	 */
 
 ?>
 
-<section class="no-results not-found">
-	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'wordpress_template' ); ?></h1>
-	</header><!-- .page-header -->
+<article id="post-<?php the_ID(); ?>" <?php post_class('p-single'); ?>>
+	<?php
+		$img_size  = 'large';
+		$thumb_id  = get_post_thumbnail_id();
+		$thumb_url = wp_get_attachment_image_src($thumb_id, $img_size);
+	?>
+	<header class="entry-header p-single__header" style="background: url('<?php echo $thumb_url[0]; ?>')center no-repeat;background-size: cover;background-color: rgba(0,0,0,.5);background-blend-mode:darken;">
+		<div class="p-single__wrap">
+			<time><?php the_time('Y-m-d'); ?> </time>
+			<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+		</div>
+	</header><!-- .entry-header -->
 
-	<div class="page-content">
+	<section class="entry-content p-single__content">
 		<?php
-		if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
+			the_content(sprintf(
+				wp_kses(
+				/* translators: %s: Name of current post. Only visible to screen readers */
+					__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'wordpress_template'),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			));
+		?>
 
-			<p><?php
-				printf(
-					wp_kses(
-						/* translators: 1: link to WP admin new post page. */
-						__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'wordpress_template' ),
-						array(
-							'a' => array(
-								'href' => array(),
-							),
-						)
-					),
-					esc_url( admin_url( 'post-new.php' ) )
-				);
-			?></p>
-
-		<?php elseif ( is_search() ) : ?>
-
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'wordpress_template' ); ?></p>
+		<div class="p-single__author">
 			<?php
-				get_search_form();
+				echo get_avatar( get_the_author_email(), '120' );
+			?>
+			<p>WRITTEN BY <br><?php the_author(); ?></p>
+		</div>
+	</section><!-- .entry-content -->
 
-		else : ?>
+	<footer class="entry-footer p-single__footer">
+		<div class="p-single__footer-wrap">
+			<nav class="p-single__footer-link">
+				<?php
+					previous_post_link('%link', '< PREV', true);
+				?>
+			</nav>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'wordpress_template' ); ?></p>
-			<?php
-				get_search_form();
+			<div class="p-single__footer-title">
+				<div class="align-self-center"><?php the_title(); ?></div>
 
-		endif; ?>
-	</div><!-- .page-content -->
-</section><!-- .no-results -->
+			</div>
+
+			<nav class="p-single__footer-link next">
+				<?php
+					next_post_link('%link', 'NEXT >', true);
+				?>
+			</nav>
+		</div>
+	</footer><!-- .entry-footer -->
+</article><!-- #post-<?php the_ID(); ?> -->

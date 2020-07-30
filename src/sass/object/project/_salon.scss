@@ -1,0 +1,82 @@
+.p-salon {
+	&__header {
+		@extend .position-relative;
+		padding: 15rem 0;
+		margin-bottom: -7rem;
+		background-color: $black;
+
+		&:before {
+			content: "";
+			@extend .d-block;
+			@extend .position-absolute;
+			top: 0;
+			@extend .w-100;
+			height: 120%;
+			background-image: url("assets/img/salon/hero/hero-left.png"), url("assets/img/salon/hero/hero-center.png"), url("assets/img/salon/hero/hero-right.png");
+			background-repeat: no-repeat;
+			background-position: left, center top, right bottom;
+			background-size: 25%, 100%, 30%;
+		}
+
+		&-txt {
+			@extend .mx-auto;
+			max-width: 870px;
+		}
+
+		h1, p {
+			@extend .text-center;
+			color: $white;
+		}
+
+		h1 {
+			@extend .mt-0;
+			@extend .mb-4;
+			font-family: $font-family-didot;
+			font-size: 140px;
+		}
+
+		p {
+			letter-spacing: 7.2px;
+		}
+	}
+
+	&__container {
+
+	}
+
+	&__map {
+		@extend .p-5;
+		background: url("assets/img/salon/bg/bg-salon.png") center no-repeat;
+		background-size: cover;
+
+		&-card {
+			@extend .ml-auto;
+			width: 50%;
+		}
+
+		&-address {
+			transform: translateY(50%);
+			@extend .mb-0;
+
+			background-color: rgba(0, 0, 0, .8);
+			border-top: 12px solid $white;
+			border-left: 12px solid $white;
+			border-right: 12px solid $white;
+
+			img {
+				width: 50%;
+			}
+		}
+
+		&-table {
+			@extend .mb-0;
+			letter-spacing: 5.4px;
+			color: $white;
+
+			th {
+				@extend .font-weight-normal;
+			}
+		}
+
+	}
+}

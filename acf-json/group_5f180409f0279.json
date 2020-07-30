@@ -311,6 +311,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_5f22d015deec0",
+            "label": "Google map埋め込み用コード",
+            "name": "google_map_iframe",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5f1e95b6f4b3e",
             "label": "フッター",
             "name": "",
@@ -335,7 +354,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -359,7 +378,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -392,5 +411,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1595839957
+    "modified": 1596117067
 }
