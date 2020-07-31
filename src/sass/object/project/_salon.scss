@@ -32,11 +32,13 @@
 			@extend .mt-0;
 			@extend .mb-4;
 			font-family: $font-family-didot;
-			font-size: 140px;
+			//font-size: 140px;
+			@include font-size(140px);
 		}
 
 		p {
 			letter-spacing: 7.2px;
+			@include font-size($fs-base);
 		}
 	}
 
@@ -49,13 +51,25 @@
 		background: url("assets/img/salon/bg/bg-salon.png") center no-repeat;
 		background-size: cover;
 
+		&-wrap {
+			max-width: $base-width__xl;
+			@extend .mx-auto;
+		}
+
 		&-card {
+			transform: translateY(50%);
+			@extend .position-relative;
 			@extend .ml-auto;
 			width: 50%;
+
+			iframe {
+				width: 100%;
+			}
 		}
 
 		&-address {
-			transform: translateY(50%);
+			@extend .px-3;
+			@extend .py-5;
 			@extend .mb-0;
 
 			background-color: rgba(0, 0, 0, .8);
@@ -65,6 +79,7 @@
 
 			img {
 				width: 50%;
+				@extend .mb-3;
 			}
 		}
 
@@ -73,10 +88,146 @@
 			letter-spacing: 5.4px;
 			color: $white;
 
+			th, td {
+				font-size: $fs-sm;
+			}
+
 			th {
 				@extend .font-weight-normal;
 			}
 		}
 
+		&-icon {
+			width: 50%;
+			@extend .p-3;
+
+			&:before {
+				content: "";
+				@extend .d-block;
+				@include svg-icon-map(300px);
+				@extend .ml-auto;
+			}
+		}
+	}
+
+	&__shampoo {
+		@extend .d-flex;
+		@extend .flex-wrap;
+		max-width: $base-width__xl;
+		@extend .mx-auto;
+		@extend .pt-5;
+
+		&-left {
+			@include flex-basis(100%);
+			@include media-breakpoint-up(xl) {
+				@include flex-basis(30%);
+			}
+
+			.top {
+				@extend .position-relative;
+				@extend .mb-5;
+
+				&:before {
+					content: "";
+					@extend .position-absolute;
+					@extend .d-block;
+					width: 100%;
+					height: 180px;
+					bottom: 0;
+					background: url("assets/img/salon/chair/chair01.png") bottom right no-repeat;
+					background-size: contain;
+				}
+
+				h2 {
+					@extend .text-right;
+					@extend .mb-0;
+					font-family: $font-family-didot;
+					font-size: 140px;
+					transform: rotate(-90deg);
+					line-height: 1em;
+					margin-top: 4em;
+					width: 140px;
+					height: 140px;
+
+					span {
+						padding-left: 2em;
+					}
+				}
+			}
+
+			.bottom {
+				&-wrap {
+					@extend .d-flex;
+					@extend .flex-wrap;
+					@extend .mb-3;
+
+				}
+
+				&-img {
+					@include flex-basis(45%);
+					@extend .text-right;
+
+					img {
+						@extend .px-2;
+						width: 60%;
+					}
+				}
+
+				&-text {
+					@include flex-basis(55%);
+
+					h3 {
+						color: $gold;
+						font-size: $fs-base;
+
+						&:before {
+							content: "";
+							@include svg-icon-arrow__black(22px, 13px)
+						}
+					}
+				}
+			}
+		}
+
+		&-right {
+			padding-top: 5%;
+			@extend .position-relative;
+			@include flex-basis(100%);
+			@include media-breakpoint-up(xl) {
+				@include flex-basis(70%);
+			}
+
+			.top {
+				@extend .d-flex;
+
+				img {
+					width: 30%;
+				}
+
+				&:after {
+					content: "";
+					@extend .align-self-center;
+					@extend .d-inline-block;
+					@include svg-slon-arrow(70%);
+					background-size: 100%;
+				}
+			}
+
+			.bottom {
+				@extend .d-flex;
+				@extend .mx-auto;
+				width: 80%;
+				margin-top: -2rem;
+
+				img, p {
+					@include flex-basis(50%);
+				}
+
+				img {
+					@extend .pr-5;
+					@extend .pt-5;
+				}
+			}
+		}
 	}
 }
