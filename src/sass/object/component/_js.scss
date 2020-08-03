@@ -30,7 +30,7 @@ slick
 
 
 // initialize前は非表示にする。
-.js-news, .js-catalog, .js-front__shop, .js-staff-hair {
+.js-news, .js-catalog, .js-front__shop, .js-staff-hair, .js-catalog-single {
 	opacity: 0;
 
 	&.slick-initialized {
@@ -249,7 +249,7 @@ slick
 	@extend .mx-lg-auto;
 	max-width: $base-width__xl;
 	width: 70%;
-	@include media-breakpoint-up(lg){
+	@include media-breakpoint-up(lg) {
 		width: 85%;
 	}
 
@@ -260,7 +260,7 @@ slick
 		height: 20vw;
 		min-width: 70px;
 		min-height: 70px;
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			width: 20vw;
 			height: 20vw;
 			min-width: 150px;
@@ -279,10 +279,10 @@ slick
 		z-index: 2;
 		@extend .p-0;
 		@extend .d-block;
-		@include media-breakpoint-up(md){
+		@include media-breakpoint-up(md) {
 			bottom: -20%;
 		}
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			top: 50%;
 			bottom: auto;
 		}
@@ -290,8 +290,8 @@ slick
 
 	.prev {
 		left: 0;
-		@include svg-arrow-left__text(80px,15px);
-		@include media-breakpoint-up(lg){
+		@include svg-arrow-left__text(80px, 15px);
+		@include media-breakpoint-up(lg) {
 			left: -3rem;
 			@include svg-arrow-left(39px, 27px);
 		}
@@ -299,10 +299,80 @@ slick
 
 	.next {
 		right: 0;
-		@include svg-arrow-right__text(80px,15px);
-		@include media-breakpoint-up(lg){
+		@include svg-arrow-right__text(80px, 15px);
+		@include media-breakpoint-up(lg) {
 			right: -3rem;
 			@include svg-arrow-right(39px, 27px);
 		}
 	}
 }
+
+/*
+catalog - single
+ */
+
+.js-catalog-single, {
+	@extend .ml-0;
+	@extend .mb-3;
+
+	@extend .p-0;
+
+	li {
+		@extend .m-0;
+		@extend .p-0;
+	}
+}
+
+.js-catalog-single__thumb {
+	@extend .position-relative;
+	@extend .m-0;
+	@extend .p-0;
+
+	li {
+		@extend .m-0;
+		@extend .p-0;
+	}
+
+	&-arrow {
+		position: initial;
+		@extend .d-flex;
+		@extend .flex-wrap;
+		@extend .justify-content-between;
+		z-index: 10;
+		margin-top: 2rem;
+		@include media-breakpoint-up(md) {
+			position: absolute;
+			bottom: -10%;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			width: 120px;
+		}
+
+		.prev, .next {
+			position: absolute;
+			@extend .font-weight-bold;
+			background-color: transparent;
+			border: none;
+			font-size: $fs-base;
+			font-family: $font-family-futura;
+			letter-spacing: .5em;
+			z-index: 10;
+			@extend .mb-0;
+			@extend .p-0;
+			@include media-breakpoint-up(md) {
+				position: relative;
+				font-size: $fs-xxl;
+			}
+		}
+
+		.prev {
+			left: .5rem;
+		}
+
+		.next {
+			right: 0;
+		}
+	}
+}
+

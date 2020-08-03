@@ -12,36 +12,35 @@
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<article class="p-archive__wrap">
-				<header class="u-title u-title__blog">
+				<header class="u-title u-title__catalog">
 					<div class="u-title__wrap">
-						<h1 class="u-title__text">Lasted Post</h1>
+						<h1 class="u-title__text">Catalog</h1>
 					</div>
 				</header>
-				<nav class="p-archive__pager-top c-pager">
-					<?php wp_pagenavi(); ?>
-				</nav>
+
+				<?php get_template_part('template-parts/components/catalog/catalog','nav'); ?>
 				<section class="p-archive__section">
-				<?php
-					if (have_posts()) : ?>
+					<?php
+						if (have_posts()) : ?>
 
 
-						<?php
-						/* Start the Loop */
-						while (have_posts()) : the_post();
+							<?php
+							/* Start the Loop */
+							while (have_posts()) : the_post();
 
-							?>
+								?>
 
-							<?php get_template_part('template-parts/components/blog', 'card'); ?>
+								<?php get_template_part('template-parts/components/catalog/catalog', 'card'); ?>
 
 
-						<?php
-						endwhile;
+							<?php
+							endwhile;
 
-					else :
+						else :
 
-						get_template_part('template-parts/content', 'none');
+							get_template_part('template-parts/content', 'none');
 
-					endif; ?>
+						endif; ?>
 					<div class="p-archive__card empty"></div>
 					<div class="p-archive__card empty"></div>
 					<div class="p-archive__card empty"></div>

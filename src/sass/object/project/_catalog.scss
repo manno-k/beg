@@ -1,0 +1,187 @@
+.p-catalog {
+	&__nav {
+		@extend .u-hidden-lg-down;
+		@extend .ml-0;
+		@extend .pl-0;
+		@extend .d-flex;
+		@extend .flex-wrap;
+		@extend .justify-content-between;
+
+		li {
+			@extend .ml-0;
+			@extend .pl-0;
+			@extend .list-unstyled;
+			@include flex-basis(12%);
+		}
+
+		a {
+			font-size: $fs-sm;
+			@extend .text-center;
+			@extend .d-block;
+			@extend .p-2;
+			border: 1px solid $black;
+			@include link_color($black) {
+				text-decoration: none;
+			}
+		}
+
+		a[aria-current="page"] {
+			background-color: $black;
+			color: $white;
+		}
+	}
+
+	&__nav-select {
+		@extend .u-hidden-xl-up;
+		@extend .mb-3;
+		@include media-breakpoint-up(lg) {
+			text-align: right;
+		}
+
+		select {
+			width: 100%;
+			@include media-breakpoint-up(lg) {
+				width: 30%;
+			}
+		}
+	}
+
+	&__gallery {
+		@extend .position-relative;
+	}
+
+	&__content {
+		background-color: $gray-white;
+		@extend .position-relative;
+
+		&-item {
+			@extend .pb-4;
+			@extend .pb-lg-0;
+		}
+
+		&:before {
+			@extend .position-absolute;
+			right: 5%;
+			top: 10%;
+			@extend .d-block;
+			@include svg-bg-catalog(300px);
+			@include media-breakpoint-up(md) {
+				content: "";
+			}
+		}
+
+		&-title {
+			@extend .position-absolute;
+			top: 5%;
+			left: 0;
+			background-color: $white;
+			@extend .px-3;
+			@extend .py-2;
+			@extend .p-md-3;
+			width: 80%;
+			max-width: 400px;
+			z-index: 2;
+			@include media-breakpoint-up(md) {
+				width: auto;
+				max-width: 350px;
+				top: -8%;
+			}
+
+			h1 {
+				font-size: $fs-xxl;
+				font-family: $font-family-mincho;
+				@extend .mt-0;
+				@extend .mb-2;
+
+			}
+
+			p {
+				font-family: $font-family-futura;
+				@extend .mb-0;
+				font-size: $fs-sm;
+				letter-spacing: 8.25px;
+				@include media-breakpoint-up(md) {
+					letter-spacing: .2em;
+					font-size: $fs-sm;
+				}
+			}
+		}
+
+		&-img {
+			@extend .position-relative;
+			@extend .d-flex;
+			@extend .flex-wrap;
+			@extend .justify-content-between;
+			@extend .pb-4;
+			@extend .p-md-5;
+			padding-top: 9rem !important;
+			z-index: 2;
+			@include media-breakpoint-up(lg) {
+				padding-top: 3rem !important;
+				z-index: 0;
+			}
+
+			&-left, &-right {
+				@include flex-basis(100%);
+				@include media-breakpoint-up(md) {
+					@include flex-basis(47%);
+				}
+			}
+
+			&-left {
+				@extend .px-4;
+
+				img {
+					width: 100%;
+					height: 100%;
+					max-width: 100%;
+					max-height: 800px;
+					@include object-fit(cover, top);
+					@include media-breakpoint-up(md) {
+						@include object-fit(contain, top);
+					}
+				}
+			}
+
+			&-right {
+				@extend .align-self-center;
+				position: relative;
+				margin: -5rem 0 0 0;
+				@include media-breakpoint-up(md) {
+					margin: auto;
+					padding-right: 0;
+					text-align: center;
+				}
+
+				.main img {
+					@extend .ml-auto;
+					@extend .mx-md-auto;
+					height: 100%;
+					width: 50%;
+					max-width: 530px;
+					max-height: 200px;
+					@include object-fit(contain, top);
+					@include media-breakpoint-up(md) {
+						width: 100%;
+						max-height: 475px;
+					}
+				}
+
+				.thumb img {
+					width: 100px;
+					height: 100px;
+					@include object-fit(cover);
+					@include media-breakpoint-up(lg) {
+						width: 150px;
+						height: 150px;
+					}
+				}
+			}
+
+		}
+	}
+
+	&__karte {
+
+	}
+}

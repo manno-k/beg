@@ -75,6 +75,33 @@
             "mime_types": ""
         },
         {
+            "key": "field_5f27d690ed0c5",
+            "label": "スタイル画像(その他)",
+            "name": "style_img_etc",
+            "type": "gallery",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "insert": "append",
+            "library": "all",
+            "min": "",
+            "max": "",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_53642dfceb620",
             "label": "コメント",
             "name": "style_comment",
@@ -112,6 +139,36 @@
             "append": "",
             "formatting": "none",
             "maxlength": ""
+        },
+        {
+            "key": "field_5f27f2b948c44",
+            "label": "施術メニュー",
+            "name": "style_menu_select",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "cut": "カット",
+                "color": "カラー",
+                "3d": "3Dカラー",
+                "perm": "パーマ",
+                "treatment": "トリートメント",
+                "set": "セット",
+                "kituke": "着付け",
+                "make": "メイク"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "horizontal",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
         },
         {
             "key": "field_53642e3beb622",
@@ -294,5 +351,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1596005909
+    "modified": 1596453783
 }

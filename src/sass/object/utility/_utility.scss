@@ -60,17 +60,28 @@ text
 		color: $white;
 	}
 
-	@each $page in blog, menu {
+	@each $page in blog, menu, catalog {
 		&__#{$page} {
 			@include media-breakpoint-up(lg) {
 				background: url('assets/img/bg/bg-#{$page}.png') center no-repeat;
 				background-size: cover;
-				padding: 3rem 0 4rem 5rem;
+				padding: 3rem 0 3rem 5rem;
 				@if $page == menu {
 					color: $black;
 				}
+				@if $page == catalog {
+					color: $black;
+				}
+
 			}
 		}
+	}
+
+	&__text {
+		@extend .pt-5;
+		@extend .pt-lg-0;
+		font-size: 2em;
+		margin: 0;
 	}
 }
 
