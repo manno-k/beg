@@ -19,9 +19,15 @@
 			<article class="p-salon__wrap">
 
 				<header class="p-salon__header">
+					<div class="p-salon__header-img">
+						<img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/assets/img/salon/sp/header-img01.png" alt="店内画像"/>
+					</div>
 					<div class="p-salon__header-txt">
 						<h1><?php the_field('title'); ?></h1>
 						<p><?php the_field('desc'); ?></p>
+					</div>
+					<div class="p-salon__header-img-bottom">
+						<img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/assets/img/salon/sp/header-img02.png" alt="店内画像"/>
 					</div>
 				</header>
 
@@ -89,6 +95,14 @@
 						<div class="p-salon__shampoo-left">
 							<div class="top">
 								<h2>Shampoo<br><span>Chair</span></h2>
+							</div>
+							<div class="center">
+								<div class="center-img">
+									<img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/assets/img/salon/sp/sp-chair.png" alt="ブラックピロー"/>
+								</div>
+								<p>
+									ブラックピローがお客様の頭部をやさしく支え、長時間の施術でも首への負担がないので、リラックスしていただけます。ピローは、ずれないよう強力に固定されますが、取り外してメンテナンスすることも可能です。
+								</p>
 							</div>
 							<div class="bottom">
 								<div class="bottom-wrap">
