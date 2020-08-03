@@ -30,7 +30,7 @@ slick
 
 
 // initialize前は非表示にする。
-.js-news, .js-catalog, .js-front__shop, .js-staff-hair, .js-catalog-single {
+.js-news, .js-catalog, .js-front__shop, .js-staff-hair, .js-catalog-single, .js-related {
 	opacity: 0;
 
 	&.slick-initialized {
@@ -376,3 +376,16 @@ catalog - single
 	}
 }
 
+/*
+.js-related 関連スライダー
+ */
+
+.js-related {
+	@extend .p-2;
+	@extend .pb-5;
+	@extend .p-lg-5;
+	@extend .mx-auto;
+	@include media-breakpoint-up(lg){
+		width: 70%;
+	}
+}

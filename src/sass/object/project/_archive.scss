@@ -1,6 +1,7 @@
 .p-archive {
 
 	&__wrap {
+		@extend .position-relative;
 		width: 100%;
 		@extend .mx-auto;
 		@include media-breakpoint-up(lg) {

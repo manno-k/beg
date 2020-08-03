@@ -167,7 +167,7 @@
             "default_value": [],
             "layout": "horizontal",
             "toggle": 0,
-            "return_format": "value",
+            "return_format": "label",
             "save_custom": 0
         },
         {
@@ -193,18 +193,18 @@
                 "image07": "カジュアル",
                 "image08": "モード"
             },
+            "allow_custom": 0,
             "default_value": [],
             "layout": "horizontal",
-            "allow_custom": 0,
-            "save_custom": 0,
             "toggle": 0,
-            "return_format": "value"
+            "return_format": "label",
+            "save_custom": 0
         },
         {
             "key": "field_53642ec8eb623",
             "label": "髪の量",
             "name": "style_volume",
-            "type": "checkbox",
+            "type": "radio",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -218,18 +218,18 @@
                 "volume02": "普通",
                 "volume03": "多い"
             },
-            "default_value": [],
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
             "layout": "horizontal",
-            "allow_custom": 0,
-            "save_custom": 0,
-            "toggle": 0,
-            "return_format": "value"
+            "return_format": "array",
+            "save_other_choice": 0
         },
         {
             "key": "field_53642f24eb624",
             "label": "髪質",
             "name": "style_type",
-            "type": "checkbox",
+            "type": "radio",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -243,18 +243,18 @@
                 "type02": "普通",
                 "type03": "硬い"
             },
-            "default_value": [],
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
             "layout": "horizontal",
-            "allow_custom": 0,
-            "save_custom": 0,
-            "toggle": 0,
-            "return_format": "value"
+            "return_format": "array",
+            "save_other_choice": 0
         },
         {
             "key": "field_53642f56eb625",
             "label": "太さ",
             "name": "style_thickness",
-            "type": "checkbox",
+            "type": "radio",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -268,12 +268,12 @@
                 "thickness02": "普通",
                 "thickness03": "太い"
             },
-            "default_value": [],
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
             "layout": "horizontal",
-            "allow_custom": 0,
-            "save_custom": 0,
-            "toggle": 0,
-            "return_format": "value"
+            "return_format": "array",
+            "save_other_choice": 0
         },
         {
             "key": "field_53642f90eb626",
@@ -351,5 +351,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1596453783
+    "modified": 1596466959
 }

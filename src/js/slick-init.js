@@ -137,5 +137,26 @@ jQuery(function ($) {
     $(thumbnailSlider).slick("slickGoTo", index, false);
   });
 
-});
+  /*
+  related
+   */
 
+  $('.js-related').slick({
+    slidesToShow: 5,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    dots: false,
+    arrows: true,
+    adaptiveHeight: false,
+    responsive: [
+      {
+        slidesToShow: 3,
+        breakpoint: 767,
+        settings: {
+          prevArrow: '<button type=”button” class="slick-prev">←PREV</button>',
+          nextArrow: '<button type=”button” class="slick-next">NEXT→</button>',
+        }
+      }
+    ]
+  });
+});
