@@ -12,46 +12,26 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'wordpress_template' ); ?></h1>
-				</header><!-- .page-header -->
+			<article id="post-<?php the_ID(); ?>" <?php post_class('p-single'); ?>>
+				<?php
+					$img_size  = 'large';
+					$thumb_id  = get_post_thumbnail_id();
+					$thumb_url = wp_get_attachment_image_src($thumb_id, $img_size);
+				?>
+				<header class="entry-header p-single__header" style="background: url('<?php echo $thumb_url[0]; ?>')center no-repeat;background-size: cover;background-color: rgba(0,0,0,.5);background-blend-mode:darken;">
+					<div class="p-single__wrap">
+						<h1 class="page-title">お探しのページは見つかりませんでした
+						</h1>
+					</div>
+				</header><!-- .entry-header -->
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'wordpress_template' ); ?></p>
+				<section class="entry-content p-single__content">
+					<p>
+						ご指定のURLのページを見つけられませんでした。
+					</p>
 
-					<?php
-						get_search_form();
-
-						the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'wordpress_template' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'wordpress_template' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-						the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+				</section><!-- .entry-content -->
+			</article><!-- #post-<?php the_ID(); ?> -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
