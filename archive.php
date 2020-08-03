@@ -1,51 +1,61 @@
 <?php
-/**
- * The template for displaying archive pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package wordpress_template
- */
+	/**
+	 * The template for displaying archive pages
+	 *
+	 * @link    https://developer.wordpress.org/themes/basics/template-hierarchy/
+	 *
+	 * @package wordpress_template
+	 */
 
-get_header(); ?>
+	get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+			<article class="p-blog__wrap">
+				<header class="u-title u-title__blog">
+					<div class="u-title__wrap">
+						<h1 class="u-title__text">Lasted Post</h1>
+					</div>
+				</header>
+				<nav class="p-blog__pager-top c-pager">
+					<?php wp_pagenavi(); ?>
+				</nav>
+				<section class="p-blog__section">
 
-		<?php
-		if ( have_posts() ) : ?>
-
-			<header class="page-header">
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+					if (have_posts()) : ?>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+						<?php
+						/* Start the Loop */
+						while (have_posts()) : the_post();
 
-			endwhile;
+							?>
 
-			the_posts_navigation();
+							<?php get_template_part('template-parts/components/blog', 'card'); ?>
 
-		else :
 
-			get_template_part( 'template-parts/content', 'none' );
+						<?php
+						endwhile;
 
-		endif; ?>
+					else :
+
+						get_template_part('template-parts/content', 'none');
+
+					endif; ?>
+					<div class="p-blog__card empty"></div>
+					<div class="p-blog__card empty"></div>
+					<div class="p-blog__card empty"></div>
+					<div class="p-blog__card empty"></div>
+					<div class="p-blog__card empty"></div>
+				</section>
+				<nav class="c-pager p-blog__pager-bottom">
+					<?php wp_pagenavi(); ?>
+				</nav>
+			</article>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
-get_footer();
+	get_footer();
