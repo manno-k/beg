@@ -31,7 +31,6 @@
 					$style_img_main = get_field('style_img_main');
 					$style_img_side = get_field('style_img_side');
 					$style_img_back = get_field('style_img_back');
-					$style_img_etc  = get_field('style_img_etc');
 
 					$attr = [
 						'alt' => $title
@@ -89,6 +88,7 @@
 								/**
 								 * thumbnail slider
 								 */
+								$style_img_etc  = get_field('style_img_etc');
 
 								$attr_thumb = [
 									'alt' => $title
