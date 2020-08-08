@@ -106,7 +106,6 @@
 										<?php echo wp_get_attachment_image($value_thumb, $size, 0, $attr_thumb); ?>
 									</li>
 								<?php endforeach; ?>
-
 							</ul>
 							<!-- arrow -->
 							<div class="js-catalog-single__thumb-arrow"></div>

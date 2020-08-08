@@ -65,6 +65,7 @@ pc 用
 		}
 
 		&:after {
+			@extend .u-hidden-md-down;
 			@extend .position-absolute;
 			@extend .d-block;
 			content: 'PRICE';
@@ -85,22 +86,31 @@ pc 用
 		}
 
 		&-left {
-			@include flex-basis(30%);
+			@include flex-basis(100%);
 			@extend .pr-5;
+			@include media-breakpoint-up(lg){
+				@include flex-basis(30%);
+			}
 		}
 
 		&-right {
-			@include flex-basis(70%);
+			@include flex-basis(100%);
 			border-top: 2px solid $black;
 			border-bottom: 2px solid $black;
 			@extend .py-3;
+			@include media-breakpoint-up(lg){
+				@include flex-basis(70%);
+			}
 		}
 	}
 
 	&__title {
 		font-size: $fs-lg;
-		@extend .mb-5;
-		width: 70%;
+		@extend .mb-3;
+		@extend .mb-lg-5;
+		@include media-breakpoint-up(lg){
+			width: 70%;
+		}
 	}
 
 	&__img {

@@ -15,7 +15,7 @@
 		$thumb_id  = get_post_thumbnail_id();
 		$thumb_url = wp_get_attachment_image_src($thumb_id, $img_size);
 	?>
-	<header class="entry-header p-single__header" style="background: url('<?php echo $thumb_url[0]; ?>')center no-repeat;background-size: cover;background-color: rgba(0,0,0,.5);background-blend-mode:darken;">
+	<header class="entry-header p-single__header" style="background: url('<?php echo $thumb_url[0]; ?>')center no-repeat;background-size: cover;">
 		<div class="p-single__wrap">
 			<time><?php the_time('Y-m-d'); ?> </time>
 			<?php the_title('<h1 class="entry-title">', '</h1>'); ?>

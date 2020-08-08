@@ -382,6 +382,11 @@
 				@include media-breakpoint-up(md) {
 					@include flex-basis(24%);
 				}
+
+				a {
+					width: 100%;
+					height: auto;
+				}
 			}
 		}
 
@@ -419,6 +424,9 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
+			@include ie_only {
+				width: 0;
+			}
 		}
 	}
 

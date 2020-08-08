@@ -12,6 +12,11 @@ l-header top
 		padding: 2rem 3rem;
 	}
 
+	@include ie_only {
+		height: 100vh;
+		width: 100%;
+	}
+
 	&:before {
 		@extend .position-absolute;
 		content: "";

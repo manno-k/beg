@@ -11,7 +11,7 @@
 			background-size: 100px;
 		}
 
-		@include media-breakpoint-up(xl){
+		@include media-breakpoint-up(xl) {
 			padding: 20vw 0;
 		}
 
@@ -67,6 +67,9 @@
 			}
 			@include media-breakpoint-up(xl) {
 				@include font-size(140px);
+				@include ie_only{
+					@include font-size(120px);
+				}
 			}
 
 		}
@@ -323,6 +326,8 @@
 
 				img {
 					width: 30%;
+					max-height: 134px;
+					@include object-fit(contain);
 				}
 
 				&:after {
@@ -339,12 +344,13 @@
 				@extend .mx-auto;
 				width: 80%;
 				margin-top: -2rem;
-
 				img, p {
 					@include flex-basis(50%);
+					@include object-fit(contain);
 				}
 
 				img {
+					@extend .align-self-start;
 					@extend .pr-5;
 					@extend .pt-5;
 				}

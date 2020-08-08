@@ -281,6 +281,17 @@
 				@include media-breakpoint-up(xl) {
 					font-size: $fs-base;
 				}
+				@include ie_only {
+					display: flex;
+				}
+
+				.list-inner{
+					@extend .d-flex;
+					@extend .justify-content-between;
+					@include ie_only{
+						@include flex-basis(100%);
+					}
+				}
 
 				span {
 					@include flex-basis(60%);

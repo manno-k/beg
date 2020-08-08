@@ -338,8 +338,8 @@
 
 			@include media-breakpoint-up(xl) {
 				line-height: 4rem;
-				font-size: $fs-md;
-				@include flex-basis(18%);
+				font-size: $fs-base;
+				@include flex-basis(20%);
 			}
 		}
 
@@ -351,15 +351,15 @@
 			@extend .mb-3;
 			@extend .mb-xl-0;
 			@include media-breakpoint-up(xl) {
-				@include flex-basis(38%);
+				@include flex-basis(45%);
 				justify-content: start;
 			}
 
 			.thumb {
 				@extend .mr-2;
+				@extend .mr-lg-0;
 				@extend .text-center;
 				@extend .text-xl-left;
-
 				img {
 					width: 100px;
 					height: 100px;
@@ -384,7 +384,7 @@
 				p:last-child {
 					@extend .mb-0;
 					font-family: $font-family-didot;
-					font-size: $fs-lg;
+					font-size: $fs-md;
 				}
 			}
 
@@ -402,9 +402,9 @@
 				text-decoration: none;
 			}
 			@include media-breakpoint-up(xl) {
-				font-size: $fs-md;
+				font-size: $fs-base;
 				line-height: 4rem;
-				@include flex-basis(40%);
+				@include flex-basis(30%);
 			}
 		}
 	}
@@ -415,7 +415,7 @@
 		.slick-next, .slick-prev {
 			top: 80%;
 			@include media-breakpoint-up(lg) {
-				top: auto;
+				top: 50%;
 			}
 		}
 

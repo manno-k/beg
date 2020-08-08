@@ -97,7 +97,7 @@
 										<ul class="p-menu__card-list">
 											<?php foreach ($cut_group['menu'] as $row) : ?>
 												<li>
-													<div class="d-flex justify-content-between">
+													<div class="list-inner">
 														<span><?php echo $row['name'] ?></span>
 														<span><?php echo $row['price'] ?></span>
 													</div>
@@ -149,7 +149,7 @@
 											<?php foreach ($color_group['menu'] as $row) : ?>
 												<?php if ($row['name']) : ?>
 													<li>
-														<div class="d-flex justify-content-between">
+														<div class="list-inner">
 															<span><?php echo $row['name'] ?></span>
 															<span><?php echo $row['price'] ?></span>
 														</div>
@@ -196,7 +196,7 @@
 											<?php foreach ($perm_group['menu'] as $row) : ?>
 												<?php if ($row['name']) : ?>
 													<li>
-														<div class="d-flex justify-content-between">
+														<div class="list-inner">
 															<span><?php echo $row['name'] ?></span>
 															<span><?php echo $row['price'] ?></span>
 														</div>
@@ -242,7 +242,7 @@
 											<?php foreach ($set_group['menu'] as $row) : ?>
 												<?php if ($row['name']) : ?>
 													<li>
-														<div class="d-flex justify-content-between">
+														<div class="list-inner">
 															<span><?php echo $row['name'] ?></span>
 															<span><?php echo $row['price'] ?></span>
 														</div>
@@ -289,7 +289,7 @@
 											<?php foreach ($set_group['menu'] as $row) : ?>
 												<?php if ($row['name']) : ?>
 													<li>
-														<div class="d-flex justify-content-between">
+														<div class="list-inner">
 															<span><?php echo $row['name'] ?></span>
 															<span><?php echo $row['price'] ?></span>
 														</div>
@@ -341,7 +341,7 @@
 											<?php foreach ($shampoo_group['menu'] as $row) : ?>
 												<?php if ($row['name']) : ?>
 													<li>
-														<div class="d-flex justify-content-between">
+														<div class="list-inner">
 															<span><?php echo $row['name'] ?></span>
 															<span><?php echo $row['price'] ?></span>
 														</div>

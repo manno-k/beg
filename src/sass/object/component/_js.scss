@@ -79,6 +79,7 @@ slick
 	}
 
 	&-arrow.pc {
+		@extend .u-hidden-md-down;
 		@extend .position-absolute;
 		padding: 0;
 		top: 60%;

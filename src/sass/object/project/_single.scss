@@ -5,6 +5,17 @@
 		color: $white;
 		width: 90%;
 		@extend .mx-auto;
+		position: relative;
+
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: $black;
+			opacity: .5;
+		}
 	}
 
 	&__wrap {
@@ -15,6 +26,9 @@
 		}
 
 		h1 {
+			@extend .position-relative;
+			z-index: 10;
+			font-family: $font-family-futura;
 			font-size: $fs-base;
 			letter-spacing: 7.2px;
 			line-height: 2em;
@@ -34,6 +48,8 @@
 		}
 
 		time {
+			@extend .position-relative;
+			z-index: 10;
 			letter-spacing: 8.1px;
 			font-size: $fs-sm;
 			@include media-breakpoint-up(lg) {
