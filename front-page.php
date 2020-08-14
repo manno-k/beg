@@ -116,10 +116,14 @@
 
 				<?php get_template_part('template-parts/components/front/front', 'nav'); ?>
 
-				<section class="l-front__shop">
-					<h2>Shop</h2>
-					<?php echo do_shortcode('[BASE_ITEM]'); ?>
-				</section>
+				<?php
+					$shop = get_field('shop', 'Options');
+					if ($shop) :?>
+						<section class="l-front__shop">
+							<h2>Shop</h2>
+							<?php echo do_shortcode('[BASE_ITEM]'); ?>
+						</section>
+					<?php endif; ?>
 
 				<section class="l-front__catalog">
 					<div class="l-front__catalog-logo">
@@ -185,14 +189,17 @@
 					</div>
 				</section>
 
+				<?php
+					$ig = get_field('instagram', 'Options');
+				?>
 				<section class="l-front__ig">
 					<h2>Latest Posts</h2>
 					<div class="l-front__ig-feed">
-						<?php echo do_shortcode('[wp_my_instagram username="2015BLUE.EYED.GIRL" limit="4" layout="4" size="large" link="" target="_blank"]'); ?>
+						<?php echo do_shortcode('[wp_my_instagram username="' . $ig . '" limit="4" layout="4" size="large" link="" target="_blank"]'); ?>
 					</div>
 				</section>
 				<div class="l-front__ig-more">
-					<a href="<?php the_field('instagram', 'Options'); ?>" target="_blank">
+					<a href="https://www.instagram.com/<?php echo $ig; ?>" target="_blank">
 						READ MORE
 					</a>
 					<div class="l-front__ig-bar"></div>

@@ -392,6 +392,41 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5f362b136da72",
+            "label": "SHOP",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f362b1e6da73",
+            "label": "SHOP公開設定",
+            "name": "shop",
+            "type": "true_false",
+            "instructions": "BASEの商品登録を先に済ませてから公開にして下さい。\r\n※反映まで最大１時間時間が必要となります。",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "公開",
+            "ui_off_text": "非公開"
         }
     ],
     "location": [
@@ -411,5 +446,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1596117067
+    "modified": 1597385552
 }
