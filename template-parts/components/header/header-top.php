@@ -42,4 +42,26 @@
 		<video id="js-bg_movie" class="l-header__video" playsinline controls loop autoplay muted width="" height="">
 			<source src="<?php echo $top_movie['url']; ?>" type="video/mp4"/>
 		</video>
+		<script>
+		jQuery(function ($) {
+			function lazyLoadVideo () {
+				var xhr = new XMLHttpRequest();
+				xhr.open('GET', "<?php echo $top_movie['url']; ?>", true);
+				xhr.responseType = 'blob';
+				xhr.onload = function (e) {
+					if (this.status === 200) {
+						// ロード完了
+						var blob = this.response;
+						var src = (window.webkitURL || window.URL).createObjectURL(blob);
+						$('#video').append('<source type="video/mp4" src="' + src + '">');
+					}
+				};
+				xhr.send();
+			}
+
+			// 実行
+			lazyLoadVideo();
+		});
+
+		</script>
 	<?php endif; ?>
