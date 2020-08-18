@@ -91,32 +91,7 @@ l-header top
 			}
 		}
 
-		&:before {
-			$video_bg_spacing: .5rem;
-			$video_bg_spacing_pc: 3rem;
-			content: "";
-			@extend .d-block;
-			@extend .position-absolute;
-			z-index: -2;
-			background: url('assets/img/video.jpg') center no-repeat;
-			background-size: cover;
 
-			top: $video_bg_spacing;
-			left: $video_bg_spacing;
-			right: $video_bg_spacing;
-			bottom: $video_bg_spacing;
-			width: calc(100vw - 1rem);
-			height: calc(100vh - 1rem);
-
-			@include media-breakpoint-up(lg) {
-				top: $video_bg_spacing_pc;
-				left: $video_bg_spacing_pc;
-				right: $video_bg_spacing_pc;
-				bottom: $video_bg_spacing_pc;
-				width: calc(100vw - 6rem);
-				height: calc(100vh - 6rem);
-			}
-		}
 	}
 
 	&__center {
