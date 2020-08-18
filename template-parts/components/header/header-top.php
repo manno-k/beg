@@ -36,10 +36,11 @@
 <a class="l-header__member" href="<?php the_field('member', 'Options') ?>">
 	MEMBER
 </a>
+
 <?php
 	$top_movie = get_field('top_movie');
 	if ($top_movie) :?>
-		<video id="js-bg_movie" class="l-header__video" playsinline controls loop autoplay muted width="" height="">
+		<video id="js-bg_movie" class="l-header__video" playsinline controls loop autoplay muted width="" height="" poster="<?php echo esc_url( get_stylesheet_directory_uri() ) ;?>/assets/img/video.jpg">
 			<source src="<?php echo $top_movie['url']; ?>" type="video/mp4"/>
 		</video>
 		<script>
