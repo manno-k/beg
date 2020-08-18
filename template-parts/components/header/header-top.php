@@ -39,9 +39,10 @@
 
 <?php
 	$top_movie = get_field('top_movie');
+	$top_movie_preload = get_field('top_movie_preload');
 	if ($top_movie) :?>
 		<div class="l-header__video">
-			<video id="js-bg_movie" class="" playsinline controls loop autoplay muted width="" height="" poster="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/assets/img/video.jpg">
+			<video id="js-bg_movie" class="" playsinline controls loop autoplay muted width="" height="" poster="<?php echo $top_movie_preload; ?>">
 				<source src="<?php echo $top_movie['url']; ?>" type="video/mp4"/>
 			</video>
 		</div>

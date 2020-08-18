@@ -11,13 +11,37 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "return_format": "array",
             "library": "all",
             "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5f3b7b13ff6c3",
+            "label": "背景動画読み込み前画像",
+            "name": "top_movie_preload",
+            "type": "image",
+            "instructions": "背景動画を読み込む前に表示される画像をアップロードしてください。",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
             "max_size": "",
             "mime_types": ""
         },
@@ -79,5 +103,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1595416877
+    "modified": 1597733693
 }
