@@ -285,10 +285,10 @@
 					display: flex;
 				}
 
-				.list-inner{
+				.list-inner {
 					@extend .d-flex;
 					@extend .justify-content-between;
-					@include ie_only{
+					@include ie_only {
 						@include flex-basis(100%);
 					}
 				}
@@ -396,6 +396,29 @@
 			@include media-breakpoint-up(lg) {
 				letter-spacing: .2rem;
 			}
+		}
+
+		&-thumb {
+			@extend .d-flex;
+			@extend .flex-wrap;
+			@extend .justify-content-between;
+			@extend .mb-3;
+
+			img {
+				height: 250px;
+				width: 100%;
+				@extend .mb-3;
+				@extend .mb-lg-0;
+				@include object-fit(cover);
+				@include media-breakpoint-up(lg) {
+					width: 30%;
+				}
+			}
+		}
+
+		&-comment {
+			color: $gold;
+			@extend .mb-3;
 		}
 	}
 }

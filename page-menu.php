@@ -221,7 +221,7 @@
 								<?php endif; ?>
 						</div>
 					</div>
-					<div class="p-menu__card" id="set" >
+					<div class="p-menu__card" id="set">
 						<h2 class="set">Set</h2>
 						<div class="p-menu__card-inner">
 							<h3>セット</h3>
@@ -323,7 +323,7 @@
 							<img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/assets/img/menu/shampoo/step.png" alt="トリートメント施術手順"/>
 						</div>
 						<div class="p-menu__card-inner shampoo">
-							<h3>シャンプ＆トリートメント</h3>
+							<h3>ツヤ髪プロジェクト</h3>
 							<?php
 								$shampoo_group = get_field('shampoo_group');
 								if ($shampoo_group): ?>
@@ -353,9 +353,9 @@
 										</ul>
 									<?php endif; ?>
 
-									<?php if ($set_group['menu_note']) : ?>
+									<?php if ($shampoo_group['menu_note']) : ?>
 										<ul class="p-menu__card-list bottom">
-											<?php foreach ($set_group['menu_note'] as $row) : ?>
+											<?php foreach ($shampoo_group['menu_note'] as $row) : ?>
 												<li>
 													<?php echo $row['txt'] ?>
 												</li>
@@ -364,10 +364,60 @@
 									<?php endif; ?>
 
 								<?php endif; ?>
-							<div class="p-menu__shampoo-img">
-								<img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/assets/img/menu/shampoo/img01.png" alt="トリートメント"/>
-								<img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/assets/img/menu/shampoo/img02.png" alt="トリートメント"/>
-							</div>
+
+							<?php if ($shampoo_group['img']) : ?>
+								<div class="p-menu__shampoo-thumb">
+									<?php foreach ($shampoo_group['img'] as $row) : ?>
+										<?php if ($row['img']) : ?>
+											<?php
+											$size      = 'medium';
+											$blog_info = get_bloginfo();
+											$attr      = [
+												'alt' => 'ツヤ髪プロジェクト'
+											];
+											echo wp_get_attachment_image($row['img']['id'], $size, 0, $attr); ?>
+										<?php endif; ?>
+									<?php endforeach; ?>
+
+								</div>
+							<?php endif; ?>
+
+							<?php if ($shampoo_group['img_comment']) : ?>
+								<div class="p-menu__shampoo-comment">
+									<?php echo $shampoo_group['img_comment']; ?>
+								</div>
+							<?php endif; ?>
+
+
+
+
+							<?php if ($shampoo_group['menu_2']) : ?>
+								<ul class="p-menu__card-list">
+									<?php foreach ($shampoo_group['menu_2'] as $row) : ?>
+										<?php if ($row['name']) : ?>
+											<li>
+												<div class="list-inner">
+													<span><?php echo $row['name'] ?></span>
+													<span><?php echo $row['price'] ?></span>
+												</div>
+											</li>
+										<?php else: ?>
+											<li class="empty"></li>
+										<?php endif; ?>
+									<?php endforeach; ?>
+								</ul>
+							<?php endif; ?>
+
+							<?php if ($shampoo_group['menu_note_2']) : ?>
+								<ul class="p-menu__card-list bottom">
+									<?php foreach ($shampoo_group['menu_note_2'] as $row) : ?>
+										<li>
+											<?php echo $row['txt'] ?>
+										</li>
+									<?php endforeach; ?>
+								</ul>
+							<?php endif; ?>
+
 
 						</div>
 					</div>
