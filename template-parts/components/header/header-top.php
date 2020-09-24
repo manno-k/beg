@@ -9,7 +9,7 @@
 		</a>
 	</li>
 	<li>
-		<a href="<?php the_field('instagram', 'Options'); ?>" target="_blank">
+		<a href="https://instagram.com/<?php the_field('instagram', 'Options'); ?>" target="_blank">
 			INSTAGRAM
 		</a>
 	</li>

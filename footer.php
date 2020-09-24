@@ -18,7 +18,7 @@
 			<a class="facebook" href="<?php the_field('facebook', 'Options'); ?>" target="_blank"></a>
 		</li>
 		<li>
-			<a class="instagram" href="<?php the_field('instagram', 'Options'); ?>" target="_blank"></a>
+			<a class="instagram" href="https://instagram.com/<?php the_field('instagram', 'Options'); ?>" target="_blank"></a>
 		</li>
 		<li>
 			<a class="twitter" href="<?php the_field('twitter', 'Options'); ?>" target="_blank"></a>
